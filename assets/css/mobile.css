@@ -1,0 +1,246 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+body,
+html {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 10px;
+  letter-spacing: -0.05rem;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#wrapper #header {
+  background-color: #032d53;
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  box-sizing: border-box;
+}
+#wrapper #header h1 {
+  flex: 1;
+}
+#wrapper #header h1 img {
+  width: 100%;
+}
+#wrapper #header nav {
+  flex: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#wrapper #header nav a {
+  color: #ffffff;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: 400;
+  text-align: center;
+}
+#wrapper #main #section-1 {
+  padding: 6rem 1rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#wrapper #main #section-1 .main-text span {
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  color: #ffffff;
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#wrapper #main #section-1 .main-text img {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+#wrapper #main #section-1 .main-text p {
+  color: #ffffff;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+}
+#wrapper #main #section-1 .medals {
+  display: flex;
+  justify-content: center;
+  padding-top: 70%;
+  padding-left: 5rem;
+}
+#wrapper #main #section-1 .medals li {
+  flex: 1;
+  text-align: center;
+  margin-left: -15%;
+}
+#wrapper #main #section-1 .medals li img {
+  width: 85%;
+}
+
+/*# sourceMappingURL=mobile.css.map */
