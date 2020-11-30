@@ -148,16 +148,18 @@
               <li><img src="/assets/images/m_section_8_list_3.png" alt="list_3" /></li>
               <li><img src="/assets/images/m_section_8_list_4.png" alt="list_4" /></li>
             </ul>
-            <div
-              class="slider-wrapper"
-              style="background-image: url('/assets/images/m_section_8_background_2.png')"
-            >
-              <img src="/assets/images/m_section_8_title_4.png" alt="title" class="title_4" />
-              <p>
-                중앙집중식 식품생산시스템(CAFPS)을 통해<br />
-                품질, 위행, 중량, 규격 등이 표준화된 제품으로 공급하여<br />
-                좋은 품질의 제품을 낮은 원가로 공급할 수 있습니다.
-              </p>
+            <div class="slider-wrapper">
+              <div
+                class="text"
+                style="background-image: url('/assets/images/m_section_8_background_2.png')"
+              >
+                <img src="/assets/images/m_section_8_title_4.png" alt="title" class="title_4" />
+                <p>
+                  중앙집중식 식품생산시스템(CAFPS)을 통해<br />
+                  품질, 위행, 중량, 규격 등이 표준화된 제품으로 공급하여<br />
+                  좋은 품질의 제품을 낮은 원가로 공급할 수 있습니다.
+                </p>
+              </div>
               <!-- Slider main container -->
               <div class="swiper-container" id="section-8-slider">
                 <!-- Additional required wrapper -->
@@ -179,11 +181,59 @@
               </div>
               <script>
                 new Swiper("#section-8-slider", {
+                  slidesPerView: "auto",
                   freeMode: true,
+                  loop: true,
                 });
               </script>
             </div>
           </div>
+        </section>
+        <section
+          id="section-9"
+          style="background-image: url('/assets/images/m_section_9_background.png')"
+        >
+          <img src="/assets/images/m_section_9_title.png" class="title" alt="title" />
+          <!-- Slider main container -->
+          <div class="swiper-container" id="section-9-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="/assets/images/m_section_9_slide_1.jpg" alt="slide_1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/assets/images/m_section_9_slide_2.jpg" alt="slide_2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/assets/images/m_section_9_slide_3.jpg" alt="slide_3" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/assets/images/m_section_9_slide_4.jpg" alt="slide_4" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/assets/images/m_section_9_slide_5.jpg" alt="slide_5" />
+              </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="navigation">
+              <div class="swiper-button-prev"></div>
+              <img src="/assets/images/m_section_9_sticker.png" class="sticker" alt="sticker" />
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <script>
+            new Swiper("#section-9-slider", {
+              centeredSlides: true,
+              spaceBetween: -20,
+              slidesPerView: "auto",
+              navigation: {
+                nextEl: "#section-9-slider .swiper-button-next",
+                prevEl: "#section-9-slider .swiper-button-prev",
+              },
+              loop: true,
+            });
+          </script>
         </section>
       </main>
       <footer id="footer"></footer>

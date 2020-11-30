@@ -394,15 +394,15 @@ a {
 }
 #wrapper #main #section-6 {
   position: relative;
-  padding-top: 2.5rem;
+  padding-top: 2.8rem;
   padding-bottom: 3rem;
 }
 #wrapper #main #section-6 h5 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
   text-align: center;
   color: #292929;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 #wrapper #main #section-6 > .title-2 {
   width: 80%;
@@ -485,6 +485,114 @@ a {
   font-size: 1.5rem;
   font-weight: bold;
   color: #ffffff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#wrapper #main #section-8 .title_1 {
+  width: 100%;
+  display: block;
+  margin-bottom: 3rem;
+}
+#wrapper #main #section-8 .box {
+  background: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 2.5rem;
+}
+#wrapper #main #section-8 .box .title_2 {
+  width: 60%;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+#wrapper #main #section-8 .box ul {
+  padding: 1rem 3rem;
+}
+#wrapper #main #section-8 .box ul li {
+  float: left;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#wrapper #main #section-8 .box ul li img {
+  width: 80%;
+}
+#wrapper #main #section-8 .box ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#wrapper #main #section-8 .box .slider-wrapper .text {
+  padding: 2.5rem 2rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#wrapper #main #section-8 .box .slider-wrapper .text .title_4 {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+#wrapper #main #section-8 .box .slider-wrapper .text p {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  color: #464646;
+  margin-bottom: 14rem;
+}
+#wrapper #main #section-8 .box .slider-wrapper .swiper-container .swiper-slide {
+  width: 12rem;
+}
+#wrapper #main #section-8 .box .slider-wrapper .swiper-container .swiper-slide img {
+  width: 100%;
+  display: block;
+}
+#wrapper #main #section-9 {
+  padding: 4.8rem 0 1rem;
+}
+#wrapper #main #section-9 .title {
+  width: 80%;
+  display: block;
+  margin: 0 auto 4rem;
+}
+#wrapper #main #section-9 .swiper-container {
+  position: relative;
+}
+#wrapper #main #section-9 .swiper-container .swiper-slide {
+  width: 65%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: 0.3s transform ease;
+  transform-origin: bottom;
+}
+#wrapper #main #section-9 .swiper-container .swiper-slide img {
+  width: 100%;
+}
+#wrapper #main #section-9 .swiper-container .swiper-slide:not(.swiper-slide-active) {
+  transform: scale(0.65);
+}
+#wrapper #main #section-9 .swiper-container .navigation {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  top: -3rem;
+  z-index: 500;
+}
+#wrapper #main #section-9 .swiper-container .navigation .sticker {
+  width: 100%;
+}
+#wrapper #main #section-9 .swiper-container .navigation .swiper-button-prev,
+#wrapper #main #section-9 .swiper-container .navigation .swiper-button-next {
+  color: #04447c;
+  outline: none;
+}
+#wrapper #main #section-9 .swiper-container .navigation .swiper-button-prev {
+  left: -3.5rem;
+}
+#wrapper #main #section-9 .swiper-container .navigation .swiper-button-next {
+  right: -3.5rem;
+}
+#wrapper #main #section-9 .swiper-container .navigation .swiper-button-prev:after,
+#wrapper #main #section-9 .swiper-container .navigation .swiper-button-next:after {
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=mobile.css.map */
