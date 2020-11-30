@@ -175,6 +175,11 @@ a {
   text-decoration: none;
 }
 
+#wrapper {
+  max-width: 42.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
 #wrapper #header {
   background-color: #032d53;
   display: flex;
@@ -200,11 +205,21 @@ a {
   font-weight: 400;
   text-align: center;
 }
+#wrapper #main > section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+#wrapper #main > img.title {
+  width: 100%;
+  display: block;
+}
 #wrapper #main #section-1 {
   padding: 6rem 1rem;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 #wrapper #main #section-1 .main-text span {
   font-weight: 600;
@@ -241,6 +256,235 @@ a {
 }
 #wrapper #main #section-1 .medals li img {
   width: 85%;
+}
+#wrapper #main #section-2 {
+  text-align: center;
+  padding: 5rem 2.5rem 15rem;
+}
+#wrapper #main #section-2 .title {
+  font-size: 2.4rem;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  background-color: #f15102;
+  margin-bottom: 1.5rem;
+}
+#wrapper #main #section-2 img {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 4rem;
+}
+#wrapper #main #section-2 ul {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+#wrapper #main #section-2 ul li {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+#wrapper #main #section-2 ul li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+#wrapper #main #section-2 p {
+  text-align: left;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+#wrapper #main #section-3 {
+  padding: 5rem 4rem 45rem;
+}
+#wrapper #main #section-3 .title {
+  display: block;
+  margin-bottom: 1rem;
+}
+#wrapper #main #section-3 img {
+  width: 100%;
+}
+#wrapper #main #section-4 {
+  padding: 3rem 0 31.5rem;
+  text-align: center;
+}
+#wrapper #main #section-4 span {
+  font-size: 1.4rem;
+  color: #c1e2f5;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+#wrapper #main #section-4 .title {
+  width: 75%;
+  display: block;
+  margin: 0 auto 1.5rem;
+  transform: translateX(-1.5rem);
+}
+#wrapper #main #section-4 .contents {
+  width: 90%;
+}
+#wrapper #main #section-5 {
+  padding: 27rem 3rem 4rem;
+}
+#wrapper #main #section-5 .title {
+  width: 75%;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+#wrapper #main #section-5 .contents {
+  width: 75%;
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper #main #section-5 form {
+  display: flex;
+}
+#wrapper #main #section-5 form .input-area {
+  flex: 3;
+}
+#wrapper #main #section-5 form .input-area input {
+  display: block;
+  background-color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem 0.8rem;
+}
+#wrapper #main #section-5 form .input-area input:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+#wrapper #main #section-5 form .submit-area {
+  flex: 2;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-left: 1rem;
+}
+#wrapper #main #section-5 form .submit-area div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+#wrapper #main #section-5 form .submit-area div input {
+  margin-left: 0;
+}
+#wrapper #main #section-5 form .submit-area div label {
+  font-size: 0.75rem;
+  color: #ffffff;
+  flex: 1;
+}
+#wrapper #main #section-5 form .submit-area div a {
+  font-size: 0.75rem;
+  color: #ffffff;
+  background-color: #092846;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.5rem;
+}
+#wrapper #main #section-5 form .submit-area div:last-of-type {
+  margin-bottom: 1rem;
+}
+#wrapper #main #section-5 form .submit-area button {
+  flex: 1;
+  width: 100%;
+  background-color: #ee731c;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+#wrapper #main #section-6 {
+  position: relative;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+#wrapper #main #section-6 h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #292929;
+  margin-bottom: 1.5rem;
+}
+#wrapper #main #section-6 > .title-2 {
+  width: 80%;
+  display: block;
+  margin: 0 auto 32rem;
+}
+#wrapper #main #section-6 div {
+  position: absolute;
+  width: 100%;
+  top: 24rem;
+}
+#wrapper #main #section-6 div img {
+  width: 45%;
+  float: left;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+#wrapper #main #section-6 div img:nth-child(1) {
+  left: 1.5rem;
+}
+#wrapper #main #section-6 div img:nth-child(2) {
+  right: 1rem;
+  width: 47%;
+}
+#wrapper #main #section-6 .contents {
+  width: 60%;
+  display: block;
+  margin: 0 auto 1.7rem;
+}
+#wrapper #main #section-6 span {
+  color: #292929;
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+}
+#wrapper #main #section-7 {
+  padding: 3.5rem 5.5rem 27rem;
+}
+#wrapper #main #section-7 .title-2 {
+  display: block;
+  width: 100%;
+  margin: 0 auto 1rem;
+}
+#wrapper #main #section-7 div {
+  text-align: center;
+}
+#wrapper #main #section-7 div p,
+#wrapper #main #section-7 div span {
+  font-size: 1.3rem;
+  line-height: 1.88rem;
+  font-weight: bold;
+}
+#wrapper #main #section-7 div p {
+  color: #1f1f1f;
+}
+#wrapper #main #section-7 div span {
+  color: #ffffff;
+  background-color: #e40b0b;
+  padding: 0.1rem 0.5rem 0;
+}
+#wrapper #main #section-7 .text {
+  margin-bottom: 2.5rem;
+}
+#wrapper #main #section-7 .contents {
+  width: 100%;
+  display: block;
+  margin: 0 auto 4rem;
+}
+#wrapper #main #section-7 .title-3 {
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+}
+#wrapper #main #section-8 {
+  padding: 3rem 2.5rem;
+}
+#wrapper #main #section-8 h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=mobile.css.map */
