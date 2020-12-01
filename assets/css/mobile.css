@@ -82,8 +82,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
+  font-family: "Noto Sans KR";
   vertical-align: baseline;
 }
 
@@ -173,6 +172,10 @@ textarea {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif !important;
 }
 
 #wrapper {
@@ -593,6 +596,567 @@ a {
 #wrapper #main #section-9 .swiper-container .navigation .swiper-button-prev:after,
 #wrapper #main #section-9 .swiper-container .navigation .swiper-button-next:after {
   font-size: 2rem;
+}
+#wrapper #main #section-10 {
+  padding: 5rem 0;
+}
+#wrapper #main #section-10 .bubble {
+  position: absolute;
+  width: 6.9rem;
+  right: 2rem;
+  top: 1rem;
+}
+#wrapper #main #section-10 h5 {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.3rem;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+}
+#wrapper #main #section-10 h5 b {
+  color: #ffe953;
+}
+#wrapper #main #section-10 .title {
+  width: 90%;
+  display: block;
+  margin: -1rem auto 3.5rem;
+}
+#wrapper #main #section-10 .contents {
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+}
+#wrapper #main #section-11 {
+  padding: 2.5rem 3rem 4rem;
+}
+#wrapper #main #section-11 .title {
+  width: 80%;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+#wrapper #main #section-11 .text {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: #272727;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+#wrapper #main #section-11 .text b {
+  font-weight: bold;
+}
+#wrapper #main #section-11 .question-list {
+  margin-bottom: 2.5rem;
+}
+#wrapper #main #section-11 .question-list li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+#wrapper #main #section-11 .question-list li img {
+  width: 100%;
+}
+#wrapper #main #section-11 .title_3 {
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+}
+#wrapper #main #section-11 .list {
+  margin-bottom: 2.5rem;
+}
+#wrapper #main #section-11 .list li {
+  float: left;
+  width: 47%;
+}
+#wrapper #main #section-11 .list li:not(:nth-child(3)):not(:nth-child(4)) {
+  margin-bottom: 3%;
+}
+#wrapper #main #section-11 .list li:nth-child(2n-1) {
+  margin-right: 3%;
+}
+#wrapper #main #section-11 .list li img {
+  width: 100%;
+}
+#wrapper #main #section-11 .list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#wrapper #main #section-11 .title_4 {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+#wrapper #main #section-12 {
+  padding: 3rem 4rem 5.5rem;
+}
+#wrapper #main #section-12 h5 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #373737;
+  margin-bottom: 1.5rem;
+}
+#wrapper #main #section-12 .title_2 {
+  width: 100%;
+  display: block;
+  margin-bottom: 2.5rem;
+}
+#wrapper #main #section-12 p {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  margin-bottom: 2.5rem;
+  color: #353535;
+  text-align: center;
+}
+#wrapper #main #section-12 p b {
+  font-weight: bold;
+}
+#wrapper #main #section-12 .testimonial {
+  width: 100%;
+}
+#wrapper #main #section-13 {
+  background-color: #434343;
+  padding: 3.5rem;
+}
+#wrapper #main #section-13 .title {
+  width: 100%;
+  display: block;
+  margin-bottom: 3rem;
+}
+#wrapper #main #section-13 .timer {
+  text-align: center;
+  letter-spacing: 0.2rem;
+  margin-bottom: 5rem;
+}
+#wrapper #main #section-13 .timer span {
+  background-image: url("/assets/images/m_section_13_timer.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+}
+#wrapper #main #section-13 .timer b {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+#wrapper #main #section-13 form {
+  margin-bottom: 4rem;
+}
+#wrapper #main #section-13 form .input-row {
+  display: flex;
+  margin-bottom: 1rem;
+}
+#wrapper #main #section-13 form .input-row .input {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+#wrapper #main #section-13 form .input-row .input label {
+  font-size: 0.9rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  flex: 0 0 4rem;
+  text-align: right;
+}
+#wrapper #main #section-13 form .input-row .input input,
+#wrapper #main #section-13 form .input-row .input select {
+  background-color: #ffffff;
+  padding: 1rem 0.9rem;
+  flex: 1;
+  font-size: 0.9rem;
+  width: 100%;
+}
+#wrapper #main #section-13 form .input-row .input input:not(:last-child),
+#wrapper #main #section-13 form .input-row .input select:not(:last-child) {
+  margin-right: 1.5rem;
+}
+#wrapper #main #section-13 form .agree-area {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+#wrapper #main #section-13 form .agree-area .check {
+  display: flex;
+  align-items: center;
+}
+#wrapper #main #section-13 form .agree-area .check label {
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+#wrapper #main #section-13 form button {
+  width: 80%;
+  margin: 0 auto 4rem;
+  display: block;
+}
+#wrapper #main #section-13 form button img {
+  width: 100%;
+}
+#wrapper #main #section-13 .call {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+#wrapper #main #section-14 {
+  padding: 4rem 1rem 2.5rem;
+  background-color: #f6f1ea;
+}
+#wrapper #main #section-14 .title_2 {
+  width: 80%;
+  display: block;
+  margin: 0 auto 2.5rem;
+}
+#wrapper #main #section-14 .box {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 3rem 1.5rem;
+  box-sizing: border-box;
+}
+#wrapper #main #section-14 .box > div span {
+  font-size: 1.3rem;
+  color: #555555;
+  display: block;
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+#wrapper #main #section-14 .box > div .title {
+  height: 1.9rem;
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper #main #section-14 .box > div p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #2b2b2b;
+}
+#wrapper #main #section-14 .box > div p b {
+  color: #007bc7;
+}
+#wrapper #main #section-14 .box .box_1 {
+  margin-bottom: 2.5rem;
+}
+#wrapper #main #section-14 .box .box_1 .img {
+  width: 50%;
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper #main #section-14 .box .box_2 {
+  margin-top: 2.5rem;
+}
+#wrapper #main #section-14 .box .box_2 .img {
+  width: 100%;
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper #main #section-14 .box > .more {
+  width: 100%;
+}
+#wrapper #main #section-15 {
+  padding: 2.5rem 2rem 5rem;
+}
+#wrapper #main #section-15 .label {
+  height: 1.5rem;
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper #main #section-15 .title_2 {
+  height: 7rem;
+  display: block;
+  margin: 0 auto 1rem;
+}
+#wrapper #main #section-15 .title_3 {
+  height: 7rem;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+#wrapper #main #section-15 .box {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 1.5rem 2.5rem;
+  box-sizing: border-box;
+  margin-bottom: 2.5rem;
+}
+#wrapper #main #section-15 .box ul {
+  display: flex;
+  justify-content: space-between;
+}
+#wrapper #main #section-15 .box ul li {
+  flex: 1;
+}
+#wrapper #main #section-15 .box ul li:nth-child(2n+1) {
+  flex: 0 0 29%;
+}
+#wrapper #main #section-15 .box ul li img {
+  width: 100%;
+}
+#wrapper #main #section-15 .text {
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: #ffffff;
+  text-align: center;
+}
+#wrapper #main #section-15 .text b {
+  font-weight: bold;
+  color: #bdd8ff;
+}
+#wrapper #main #section-16 {
+  padding: 3.5rem 1.5rem 4rem;
+  background-color: #1c283a;
+}
+#wrapper #main #section-16 .label {
+  height: 1.5rem;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+#wrapper #main #section-16 .title {
+  height: 7rem;
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper #main #section-16 .box {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  padding: 3rem 0;
+}
+#wrapper #main #section-16 .box ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+#wrapper #main #section-16 .box ul li {
+  flex: 1 0 50%;
+}
+#wrapper #main #section-16 .box ul li:not(:nth-child(3)):not(:nth-child(4)) {
+  margin-bottom: 2.5rem;
+}
+#wrapper #main #section-16 .box ul li .num {
+  width: 2rem;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+#wrapper #main #section-16 .box ul li .img {
+  width: 50%;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+#wrapper #main #section-16 .box ul li p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #121212;
+  text-align: center;
+}
+#wrapper #main #section-16 .box ul li p b {
+  font-weight: bold;
+  color: #2e5ca6;
+}
+#wrapper #main #section-17 {
+  padding: 3.5rem 1.2rem 4.5rem;
+}
+#wrapper #main #section-17 .label {
+  height: 1.5rem;
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper #main #section-17 .title {
+  height: 7rem;
+  display: block;
+  margin: 0 auto 1rem;
+}
+#wrapper #main #section-17 ul li img {
+  width: 100%;
+}
+#wrapper #main #section-17 ul li:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+#wrapper #main #section-18 {
+  padding: 3.5rem 1.5rem;
+}
+#wrapper #main #section-18 .label {
+  height: 1.5rem;
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper #main #section-18 .title {
+  height: 7rem;
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper #main #section-18 .box-1 {
+  padding: 3rem 3rem;
+  box-sizing: border-box;
+  margin-bottom: 2.5rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#wrapper #main #section-18 .box-1 ul {
+  display: flex;
+  align-items: center;
+}
+#wrapper #main #section-18 .box-1 ul li {
+  text-align: center;
+  flex: 1;
+}
+#wrapper #main #section-18 .box-1 ul li:nth-child(2n+1) {
+  flex: 0 0 25%;
+}
+#wrapper #main #section-18 .box-1 ul li img {
+  width: 100%;
+}
+#wrapper #main #section-18 .box-1 ul li .dots {
+  width: 2%;
+}
+#wrapper #main #section-18 .box-2 {
+  padding: 5rem 1rem 0.5rem;
+  box-sizing: border-box;
+  margin-bottom: 2.5rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#wrapper #main #section-18 .box-2 ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+#wrapper #main #section-18 .box-2 ul li {
+  flex: 1 1 30%;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+#wrapper #main #section-18 .box-2 ul li img {
+  height: 10.7rem;
+}
+#wrapper #main #section-18 .box-2 ul li:nth-child(4) img {
+  height: 12.5rem;
+}
+#wrapper #main #section-19 {
+  padding: 6.5rem 2.1rem;
+}
+#wrapper #main #section-19 p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.9rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+#wrapper #main #section-19 .title {
+  height: 7rem;
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper #main #section-19 .box .img_1 {
+  width: 101%;
+}
+#wrapper #main #section-19 .box .vs {
+  width: 25%;
+  display: block;
+  position: relative;
+  z-index: 5;
+  margin: -2.8rem auto;
+}
+#wrapper #main #section-19 .box .img_2 {
+  width: 103%;
+}
+#wrapper #main #section-20 {
+  padding: 2.5rem 1rem;
+}
+#wrapper #main #section-20 .title {
+  width: 80%;
+  display: block;
+  margin: 0 auto 1rem;
+}
+#wrapper #main #section-20 .table {
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+}
+#wrapper #main #section-20 .form-area {
+  padding: 2.5rem 3rem;
+  box-sizing: border-box;
+  background-color: #1b1b1b;
+  border: 3px solid #04447c;
+}
+#wrapper #main #section-20 .form-area .form-title {
+  width: 80%;
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper #main #section-20 .form-area form {
+  display: flex;
+}
+#wrapper #main #section-20 .form-area form .input-area {
+  flex: 3;
+  margin-right: 1.5rem;
+}
+#wrapper #main #section-20 .form-area form .input-area .input-row {
+  display: flex;
+  align-items: center;
+}
+#wrapper #main #section-20 .form-area form .input-area .input-row:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+#wrapper #main #section-20 .form-area form .input-area .input-row label {
+  font-size: 0.9rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-right: 1rem;
+  flex: 0 0 4rem;
+  text-align: right;
+}
+#wrapper #main #section-20 .form-area form .input-area .input-row input {
+  display: block;
+  background-color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0.7rem;
+  padding: 0.8rem 0.8rem;
+}
+#wrapper #main #section-20 .form-area form .input-area .input-row input:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+#wrapper #main #section-20 .form-area form .submit-area {
+  flex: 2;
+  display: flex;
+  flex-flow: column nowrap;
+}
+#wrapper #main #section-20 .form-area form .submit-area div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+#wrapper #main #section-20 .form-area form .submit-area div input {
+  margin-left: 0;
+  width: 0.5rem;
+}
+#wrapper #main #section-20 .form-area form .submit-area div label {
+  font-size: 0.47rem;
+  color: #ffffff;
+  flex: 1;
+}
+#wrapper #main #section-20 .form-area form .submit-area div a {
+  font-size: 0.47rem;
+  color: #ffffff;
+  background-color: #092846;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.5rem;
+}
+#wrapper #main #section-20 .form-area form .submit-area div:last-of-type {
+  margin-bottom: 1rem;
+}
+#wrapper #main #section-20 .form-area form .submit-area button {
+  flex: 1;
+  width: 100%;
+  color: #1b1b1b;
+  font-weight: bold;
+  background-color: #ffa200;
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=mobile.css.map */
