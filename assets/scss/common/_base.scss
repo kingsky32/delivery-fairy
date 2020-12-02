@@ -84,7 +84,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: "Noto Sans KR";
+  font-family: inherit;
   vertical-align: baseline;
 }
 
@@ -108,7 +108,7 @@ body {
 
 body,
 html {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Noto Sans KR";
   font-size: 10px;
   letter-spacing: -0.05rem;
 }
