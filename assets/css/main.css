@@ -1,3 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 100;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 900;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format("opentype");
+}
+@font-face {
+  font-family: "S-CoreDream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDreamr";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 html,
 body,
 div,
@@ -82,8 +143,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
+  font-family: inherit;
   vertical-align: baseline;
 }
 
@@ -103,6 +163,13 @@ section {
 
 body {
   line-height: 1;
+}
+
+body,
+html {
+  font-family: "Noto Sans KR";
+  font-size: 10px;
+  letter-spacing: -0.1rem;
 }
 
 ol,
@@ -161,6 +228,1039 @@ textarea {
   background-color: transparent;
   outline: none;
   border: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#wrapper {
+  min-width: 110rem;
+  padding-top: 12rem;
+}
+#wrapper .inner {
+  width: 110rem;
+  margin: 0 auto;
+  position: relative;
+}
+#wrapper #header {
+  background-color: #032d53;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+}
+#wrapper #header nav {
+  display: flex;
+  width: 100%;
+  height: 12rem;
+  padding: 1rem 0;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
+#wrapper #header nav a {
+  color: #ffffff;
+  font-family: "S-CoreDream";
+  font-size: 2.1rem;
+  line-height: 2.6rem;
+  font-weight: 400;
+  text-align: center;
+}
+#wrapper #header nav a img {
+  width: 12rem;
+}
+#wrapper #main > section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+#wrapper #main > .title {
+  width: 100%;
+  display: block;
+}
+#wrapper #main #section-1 {
+  padding-top: 10rem;
+  padding-bottom: 13rem;
+}
+#wrapper #main #section-1 .main-text {
+  margin-bottom: 4rem;
+}
+#wrapper #main #section-1 .main-text span {
+  font-size: 2.9rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  display: block;
+  letter-spacing: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+#wrapper #main #section-1 .main-text img {
+  width: 80%;
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper #main #section-1 .main-text p {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+}
+#wrapper #main #section-1 .medals {
+  display: flex;
+  align-items: center;
+}
+#wrapper #main #section-1 .medals li {
+  flex: 1;
+}
+#wrapper #main #section-1 .medals li:nth-child(2) {
+  margin-left: -2rem;
+}
+#wrapper #main #section-1 .medals li:nth-child(3) {
+  flex: 2;
+  margin: 0 2rem;
+}
+#wrapper #main #section-1 .medals li:nth-child(3) img {
+  transform: scale(1.25) translate(-2rem, -2rem);
+}
+#wrapper #main #section-1 .medals li:nth-child(4) {
+  margin-right: -2rem;
+}
+#wrapper #main #section-1 .medals li img {
+  width: 100%;
+}
+#wrapper #main #section-2 {
+  padding: 14rem 0;
+}
+#wrapper #main #section-2 span {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: #f15102;
+  padding: 0.5rem 1rem;
+}
+#wrapper #main #section-2 img {
+  margin: 3rem 0 4.8rem;
+  display: block;
+}
+#wrapper #main #section-2 ul {
+  margin-bottom: 3.7rem;
+}
+#wrapper #main #section-2 ul li {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 2rem;
+}
+#wrapper #main #section-2 ul li:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+#wrapper #main #section-2 p {
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 2.9rem;
+}
+#wrapper #main #section-3 {
+  padding: 9rem 0 14rem;
+}
+#wrapper #main #section-3 .title {
+  width: 50%;
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper #main #section-3 .contents {
+  width: 60%;
+  display: block;
+  margin: 0 auto 2.5rem;
+}
+#wrapper #main #section-3 .img {
+  width: 80%;
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper #main #section-3 .text {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+#wrapper #main #section-4 {
+  padding: 10rem 0 14rem;
+}
+#wrapper #main #section-4 span {
+  color: #c1e2f5;
+  font-size: 3rem;
+  display: block;
+  text-align: center;
+  margin-bottom: -5rem;
+}
+#wrapper #main #section-4 .title {
+  width: 80%;
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper #main #section-4 .contents {
+  width: 60%;
+  display: block;
+  margin: 0 auto 1rem;
+}
+#wrapper #main #section-4 ul {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+#wrapper #main #section-5 {
+  padding: 5.5rem 0 28rem;
+}
+#wrapper #main #section-5 .title {
+  width: 80%;
+  margin: 0 auto 4rem;
+  display: block;
+}
+#wrapper #main #section-5 ol {
+  width: 65%;
+  margin: 0 auto;
+}
+#wrapper #main #section-5 ol li {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #1c1c1c;
+  display: flex;
+  align-items: center;
+  float: left;
+  width: 50%;
+}
+#wrapper #main #section-5 ol li:nth-child(1), #wrapper #main #section-5 ol li:nth-child(2), #wrapper #main #section-5 ol li:nth-child(3), #wrapper #main #section-5 ol li:nth-child(4) {
+  margin-bottom: 2rem;
+}
+#wrapper #main #section-5 ol li img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1.5rem;
+}
+#wrapper #main #section-6 {
+  position: relative;
+  padding-top: 9rem;
+  padding-bottom: 7rem;
+}
+#wrapper #main #section-6 .inner h5 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #292929;
+  margin-bottom: 3.5rem;
+}
+#wrapper #main #section-6 .inner > .title-2 {
+  width: 60%;
+  display: block;
+  margin: 0 auto 60rem;
+}
+#wrapper #main #section-6 .inner div {
+  position: absolute;
+  width: 100%;
+  top: 45rem;
+}
+#wrapper #main #section-6 .inner div img {
+  width: 45%;
+  float: left;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+#wrapper #main #section-6 .inner div img:nth-child(1) {
+  left: 3rem;
+}
+#wrapper #main #section-6 .inner div img:nth-child(2) {
+  right: 5rem;
+  width: 36%;
+}
+#wrapper #main #section-7 {
+  padding: 17rem 0 12.5rem;
+}
+#wrapper #main #section-7 .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#wrapper #main #section-7 .row:nth-child(1) {
+  margin-bottom: 8.5rem;
+}
+#wrapper #main #section-7 .row:nth-child(1) > img {
+  margin-bottom: -10rem;
+}
+#wrapper #main #section-7 .row div p,
+#wrapper #main #section-7 .row div span {
+  font-size: 2.7rem;
+  line-height: 4rem;
+  font-weight: bold;
+}
+#wrapper #main #section-7 .row div p {
+  color: #1f1f1f;
+}
+#wrapper #main #section-7 .row div span {
+  color: #ffffff;
+  background-color: #e40b0b;
+  padding: 0.1rem 0.5rem 0;
+}
+#wrapper #main #section-8 {
+  padding: 10rem 0 13rem;
+}
+#wrapper #main #section-8 h5 {
+  font-size: 3rem;
+  color: #ffffff;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+#wrapper #main #section-8 .title_1 {
+  width: 60%;
+  margin: 0 auto 3.5rem;
+  display: block;
+}
+#wrapper #main #section-8 .box {
+  width: 100%;
+  background: #ffffff;
+  padding-top: 7rem;
+}
+#wrapper #main #section-8 .box .title_2 {
+  width: 30%;
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper #main #section-8 .box ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8rem;
+  margin-bottom: 7rem;
+  box-sizing: border-box;
+}
+#wrapper #main #section-8 .box ul li {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+#wrapper #main #section-8 .box ul li:nth-child(2n) {
+  flex: 0 0 3px;
+}
+#wrapper #main #section-8 .box ul li:nth-child(2n) img {
+  width: 80%;
+}
+#wrapper #main #section-8 .box ul li img {
+  width: 60%;
+}
+#wrapper #main #section-8 .box .slider-wrapper {
+  background-color: #f4f4f4;
+}
+#wrapper #main #section-8 .box .slider-wrapper .text-area {
+  padding: 6.5rem 3rem 8rem 8rem;
+  display: flex;
+  align-items: center;
+}
+#wrapper #main #section-8 .box .slider-wrapper .text-area .text {
+  flex: 1;
+}
+#wrapper #main #section-8 .box .slider-wrapper .text-area .text .title_4 {
+  width: 100%;
+  display: block;
+  margin-bottom: 3rem;
+}
+#wrapper #main #section-8 .box .slider-wrapper .text-area .text p {
+  font-size: 2rem;
+  line-height: 3.1rem;
+  color: #464646;
+}
+#wrapper #main #section-8 .box .slider-wrapper .text-area .truck {
+  width: 45%;
+  margin-left: 2rem;
+}
+#wrapper #main #section-8 .box .slider-wrapper .swiper-container .swiper-wrapper .swiper-slide {
+  width: 32rem;
+  height: 23rem;
+}
+#wrapper #main #section-9 {
+  padding: 12.5rem 0 5rem;
+}
+#wrapper #main #section-9 .title {
+  width: 47.5rem;
+  display: block;
+  margin: 0 auto 4rem;
+}
+#wrapper #main #section-9 .swiper-container {
+  position: relative;
+}
+#wrapper #main #section-9 .swiper-container .swiper-slide {
+  width: 60rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: 0.3s transform ease;
+  transform-origin: bottom;
+}
+#wrapper #main #section-9 .swiper-container .swiper-slide img {
+  width: 100%;
+}
+#wrapper #main #section-9 .swiper-container .swiper-slide:not(.swiper-slide-active) {
+  transform: scale(0.65);
+}
+#wrapper #main #section-9 .swiper-container .navigation {
+  position: relative;
+  width: 23rem;
+  height: 23rem;
+  margin: 0 auto;
+  top: -5rem;
+  z-index: 500;
+}
+#wrapper #main #section-9 .swiper-container .navigation .sticker {
+  width: 100%;
+}
+#wrapper #main #section-9 .swiper-container .navigation .swiper-button-prev,
+#wrapper #main #section-9 .swiper-container .navigation .swiper-button-next {
+  color: #04447c;
+  outline: none;
+}
+#wrapper #main #section-9 .swiper-container .navigation .swiper-button-prev {
+  left: -3.5rem;
+}
+#wrapper #main #section-9 .swiper-container .navigation .swiper-button-next {
+  right: -3.5rem;
+}
+#wrapper #main #section-9 .swiper-container .navigation .swiper-button-prev:after,
+#wrapper #main #section-9 .swiper-container .navigation .swiper-button-next:after {
+  font-size: 2rem;
+}
+#wrapper #main #section-10 {
+  padding: 11rem 0 10rem;
+}
+#wrapper #main #section-10 .bubble {
+  position: absolute;
+  width: 15rem;
+  left: 85rem;
+  right: 0;
+  margin: 0 auto;
+  top: 10rem;
+}
+#wrapper #main #section-10 h5 {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 3rem;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+}
+#wrapper #main #section-10 h5 b {
+  color: #ffe953;
+}
+#wrapper #main #section-10 .title {
+  width: 67rem;
+  display: block;
+  margin: -1rem auto 3.5rem;
+}
+#wrapper #main #section-10 .contents {
+  width: 114.3rem;
+  display: block;
+  margin: 0 auto;
+}
+#wrapper #main #section-11 {
+  padding: 10rem 0;
+}
+#wrapper #main #section-11 .title {
+  width: 80%;
+  display: block;
+  margin: 0 auto 2.5rem;
+}
+#wrapper #main #section-11 .text {
+  font-size: 3rem;
+  line-height: 4.2rem;
+  color: #272727;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+#wrapper #main #section-11 .text b {
+  font-weight: bold;
+}
+#wrapper #main #section-11 .question-list {
+  margin-bottom: 2rem;
+}
+#wrapper #main #section-11 .question-list li {
+  width: 62.5rem;
+}
+#wrapper #main #section-11 .question-list li:nth-child(1) {
+  margin: 0 auto;
+  transform: translateX(-17rem);
+}
+#wrapper #main #section-11 .question-list li:nth-child(2) {
+  margin: -3rem auto 0;
+  transform: translateX(17rem);
+}
+#wrapper #main #section-11 .question-list li:nth-child(3) {
+  margin: -3rem 0 0 0;
+}
+#wrapper #main #section-11 .question-list li img {
+  width: 100%;
+}
+#wrapper #main #section-11 .title_3 {
+  width: 80%;
+  display: block;
+  margin: 0 auto 5rem;
+}
+#wrapper #main #section-11 .list {
+  margin-bottom: 2.5rem;
+  display: flex;
+}
+#wrapper #main #section-11 .list li {
+  flex: 1;
+}
+#wrapper #main #section-11 .list li:not(:last-child) {
+  margin-right: 2rem;
+}
+#wrapper #main #section-11 .list li img {
+  width: 100%;
+}
+#wrapper #main #section-11 .list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#wrapper #main #section-11 .title_4 {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+#wrapper #main #section-12 {
+  padding: 10rem 0rem 9rem;
+}
+#wrapper #main #section-12 h5 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #373737;
+  margin-bottom: 2.5rem;
+}
+#wrapper #main #section-12 .title_2 {
+  width: 80%;
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper #main #section-12 p {
+  font-size: 2.6rem;
+  line-height: 3.6rem;
+  margin-bottom: 2.7rem;
+  color: #353535;
+  text-align: center;
+}
+#wrapper #main #section-12 p b {
+  font-weight: bold;
+}
+#wrapper #main #section-12 .testimonial {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+#wrapper #main #section-13 {
+  background-color: #434343;
+  padding: 8.5rem 0;
+}
+#wrapper #main #section-13 .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+#wrapper #main #section-13 .row .title {
+  width: 35rem;
+  display: block;
+  margin-right: 5rem;
+}
+#wrapper #main #section-13 .row .timer {
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+#wrapper #main #section-13 .row .timer span {
+  background-image: url("/assets/images/m_section_13_timer.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  font-size: 4.7rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+}
+#wrapper #main #section-13 .row .timer b {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+#wrapper #main #section-13 form {
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: flex-start;
+  padding: 0 17rem;
+}
+#wrapper #main #section-13 form .input-area {
+  flex: 1;
+}
+#wrapper #main #section-13 form .input-area .input-row {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+#wrapper #main #section-13 form .input-area .input-row .input {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+#wrapper #main #section-13 form .input-area .input-row .input label {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  flex: 0 0 6rem;
+  text-align: right;
+}
+#wrapper #main #section-13 form .input-area .input-row .input input,
+#wrapper #main #section-13 form .input-area .input-row .input select {
+  background-color: #ffffff;
+  padding: 1rem 0.9rem;
+  flex: 1;
+  font-size: 1.5rem;
+  width: 100%;
+}
+#wrapper #main #section-13 form .input-area .input-row .input input:not(:last-child),
+#wrapper #main #section-13 form .input-area .input-row .input select:not(:last-child) {
+  margin-right: 1.5rem;
+}
+#wrapper #main #section-13 form .agree-area {
+  display: flex;
+  margin-left: 6rem;
+  margin-bottom: 1rem;
+}
+#wrapper #main #section-13 form .agree-area .check {
+  display: flex;
+  align-items: center;
+}
+#wrapper #main #section-13 form .agree-area .check label {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+#wrapper #main #section-13 form button {
+  width: 25rem;
+  margin-left: 3.8rem;
+  display: block;
+}
+#wrapper #main #section-13 form button img {
+  width: 100%;
+}
+#wrapper #main #section-13 .call {
+  width: 71rem;
+  display: block;
+  margin: 0 auto;
+}
+#wrapper #main #section-14 {
+  padding: 12rem 1rem 11rem;
+  background-color: #f6f1ea;
+}
+#wrapper #main #section-14 .title_2 {
+  width: 80%;
+  display: block;
+  margin: 0 auto 4rem;
+}
+#wrapper #main #section-14 .box {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 6rem 2rem 7rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+#wrapper #main #section-14 .box > div {
+  flex: 1;
+}
+#wrapper #main #section-14 .box > div span {
+  font-size: 2.4rem;
+  color: #555555;
+  display: block;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+#wrapper #main #section-14 .box > div .title {
+  height: 3.6rem;
+  display: block;
+  margin: 0 auto 4rem;
+}
+#wrapper #main #section-14 .box > div .img {
+  height: 26.3rem;
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper #main #section-14 .box > div p {
+  font-size: 1.9rem;
+  line-height: 3rem;
+  text-align: center;
+  color: #2b2b2b;
+}
+#wrapper #main #section-14 .box > div p b {
+  color: #007bc7;
+}
+#wrapper #main #section-14 .box > .more {
+  height: 100%;
+}
+#wrapper #main #section-15 {
+  padding: 8rem 11rem;
+}
+#wrapper #main #section-15 .label {
+  width: 16.2rem;
+  display: block;
+  margin: 0 auto 3.5rem;
+}
+#wrapper #main #section-15 .title_2 {
+  height: 6.3rem;
+  display: block;
+  margin: 0 auto 1rem;
+}
+#wrapper #main #section-15 .title_3 {
+  height: 6.3rem;
+  display: block;
+  margin: 0 auto 4rem;
+}
+#wrapper #main #section-15 .box {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  width: 85rem;
+  margin: 0 auto;
+  padding: 0 7.5rem;
+  box-sizing: border-box;
+  margin-bottom: 2.5rem;
+}
+#wrapper #main #section-15 .box ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#wrapper #main #section-15 .box ul li {
+  flex: 0 0 5rem;
+}
+#wrapper #main #section-15 .box ul li:nth-child(2n+1) {
+  flex: 0 0 17rem;
+}
+#wrapper #main #section-15 .box ul li img {
+  width: 100%;
+}
+#wrapper #main #section-15 .text {
+  font-size: 3rem;
+  line-height: 4.4rem;
+  color: #ffffff;
+  text-align: center;
+}
+#wrapper #main #section-15 .text b {
+  font-weight: bold;
+  color: #bdd8ff;
+  border-bottom: 1px solid #bdd8ff;
+}
+#wrapper #main #section-16 {
+  padding: 9.3rem 0 10rem;
+  background-color: #1c283a;
+}
+#wrapper #main #section-16 .label {
+  width: 16.2rem;
+  display: block;
+  margin: 0 auto 3.5rem;
+}
+#wrapper #main #section-16 .title {
+  height: 6.3rem;
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper #main #section-16 .box {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  padding: 5rem 6rem;
+}
+#wrapper #main #section-16 .box ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+#wrapper #main #section-16 .box ul li {
+  flex: 0 0 40rem;
+  height: 15.5rem;
+  display: flex;
+}
+#wrapper #main #section-16 .box ul li:nth-child(2n-1) {
+  margin-right: 10rem;
+}
+#wrapper #main #section-16 .box ul li:nth-child(1), #wrapper #main #section-16 .box ul li:nth-child(2) {
+  margin-bottom: 5rem;
+}
+#wrapper #main #section-16 .box ul li .img {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 2.5rem;
+}
+#wrapper #main #section-16 .box ul li .img img {
+  width: 100%;
+}
+#wrapper #main #section-16 .box ul li .text {
+  flex: 0 0 28rem;
+}
+#wrapper #main #section-16 .box ul li .text .num {
+  width: 5rem;
+  display: block;
+  margin-bottom: 2.4rem;
+}
+#wrapper #main #section-16 .box ul li .text p {
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+  color: #121212;
+}
+#wrapper #main #section-16 .box ul li .text p b {
+  font-weight: bold;
+  color: #2e5ca6;
+}
+#wrapper #main #section-17 {
+  padding: 9rem 0 8rem;
+}
+#wrapper #main #section-17 .label {
+  width: 16.2rem;
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper #main #section-17 .title {
+  height: 6.3rem;
+  display: block;
+  margin: 0 auto 2.5rem;
+}
+#wrapper #main #section-17 p {
+  font-size: 2.6rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2.9rem;
+}
+#wrapper #main #section-17 p b {
+  font-weight: bold;
+}
+#wrapper #main #section-17 ul {
+  display: flex;
+}
+#wrapper #main #section-17 ul li {
+  flex: 1;
+}
+#wrapper #main #section-17 ul li img {
+  width: 100%;
+}
+#wrapper #main #section-17 ul li:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+#wrapper #main #section-18 {
+  padding: 3.5rem 1.5rem;
+}
+#wrapper #main #section-18 .label {
+  width: 16.2rem;
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper #main #section-18 .title {
+  height: 6.3rem;
+  display: block;
+  margin: 0 auto 2.5rem;
+}
+#wrapper #main #section-18 .box-1 {
+  padding: 11rem 8rem 6rem;
+  box-sizing: border-box;
+  margin-bottom: 2.5rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#wrapper #main #section-18 .box-1 ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#wrapper #main #section-18 .box-1 ul li {
+  text-align: center;
+  flex: 0 0 15rem;
+}
+#wrapper #main #section-18 .box-1 ul li:nth-child(2n+1) {
+  flex: 0 0 17rem;
+}
+#wrapper #main #section-18 .box-1 ul li img {
+  width: 100%;
+}
+#wrapper #main #section-18 .box-1 ul li .dots {
+  width: 1.5%;
+}
+#wrapper #main #section-18 .box-2 {
+  padding: 14rem 6.5rem 8.5rem;
+  box-sizing: border-box;
+  margin-bottom: 2.5rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#wrapper #main #section-18 .box-2 ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+#wrapper #main #section-18 .box-2 ul li {
+  flex: 1 1 30%;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+#wrapper #main #section-18 .box-2 ul li img {
+  height: 22rem;
+}
+#wrapper #main #section-19 {
+  padding: 18.5rem 0 7rem;
+}
+#wrapper #main #section-19 p {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.9rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+#wrapper #main #section-19 .title {
+  height: 14rem;
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper #main #section-19 .box {
+  display: flex;
+  width: 115rem;
+  margin: 0 auto;
+}
+#wrapper #main #section-19 .box .vs {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  margin: 0 -4rem;
+}
+#wrapper #main #section-19 .box .vs img {
+  width: 8.2rem;
+}
+#wrapper #main #section-19 .box .img_2 {
+  transform: scale(1.05) translate(1rem, 1rem);
+}
+#wrapper #main #section-20 {
+  padding: 2.5rem 1rem;
+}
+#wrapper #main #section-20 .title {
+  width: 60%;
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper #main #section-20 .table {
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+}
+#wrapper #main #section-20 .form-area {
+  padding: 4rem 10.5rem;
+  box-sizing: border-box;
+  background-color: #1b1b1b;
+  border: 3px solid #04447c;
+}
+#wrapper #main #section-20 .form-area .form-title {
+  width: 40%;
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper #main #section-20 .form-area form {
+  display: flex;
+}
+#wrapper #main #section-20 .form-area form .input-area {
+  flex: 1;
+  margin-right: 1.5rem;
+  display: flex;
+  flex-flow: row wrap;
+}
+#wrapper #main #section-20 .form-area form .input-area .input-row {
+  flex: 1 0 50%;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+#wrapper #main #section-20 .form-area form .input-area .input-row label {
+  font-size: 1.7rem;
+  color: #ffffff;
+  font-weight: 400;
+  margin-right: 1rem;
+  flex: 0 0 8rem;
+  text-align: right;
+}
+#wrapper #main #section-20 .form-area form .input-area .input-row input,
+#wrapper #main #section-20 .form-area form .input-area .input-row select {
+  display: block;
+  background-color: #ffffff;
+  width: 100%;
+  font-weight: 400;
+  box-sizing: border-box;
+  font-size: 1.7rem;
+  padding: 1.4rem 0.8rem;
+}
+#wrapper #main #section-20 .form-area form .input-area .input-row input:not(:last-child),
+#wrapper #main #section-20 .form-area form .input-area .input-row select:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+#wrapper #main #section-20 .form-area form .input-area .check-area {
+  width: 100%;
+  display: flex;
+  padding-left: 8rem;
+  align-items: center;
+}
+#wrapper #main #section-20 .form-area form .input-area .check-area div {
+  display: flex;
+  align-items: center;
+}
+#wrapper #main #section-20 .form-area form .input-area .check-area div:not(:last-child) {
+  margin-left: 1.5rem;
+}
+#wrapper #main #section-20 .form-area form .input-area .check-area div input,
+#wrapper #main #section-20 .form-area form .input-area .check-area div select {
+  margin-left: 0;
+  width: 1.3rem;
+}
+#wrapper #main #section-20 .form-area form .input-area .check-area div label {
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 400;
+}
+#wrapper #main #section-20 .form-area form .input-area .check-area div a {
+  font-size: 1.3rem;
+  color: #ffffff;
+  background-color: #092846;
+  border-radius: 0.2rem;
+  padding: 0.5rem 2rem;
+}
+#wrapper #main #section-20 .form-area form .submit-area {
+  width: 16.8rem;
+}
+#wrapper #main #section-20 .form-area form .submit-area button {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+}
+#wrapper #main #section-20 .form-area form .submit-area button img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

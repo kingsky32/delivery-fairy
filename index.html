@@ -2,12 +2,1041 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>배달요정</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="/assets/css/main.css" />
     <script src="/assets/js/detect_mobile.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script>
+      var regNumExp = /^[0-9]+$/;
+      var regEmailExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+
+      function get_write_token(bo_table) {
+        var token = "";
+
+        $.ajax({
+          type: "POST",
+          url: "/g5/bbs/write_token.php",
+          data: { bo_table: bo_table },
+          cache: false,
+          async: false,
+          dataType: "json",
+          success: function (data) {
+            if (data.error) {
+              alert(data.error);
+              if (data.url) document.location.href = data.url;
+
+              return false;
+            }
+
+            token = data.token;
+          },
+        });
+
+        return token;
+      }
+    </script>
   </head>
   <body>
-    <div id="wrapper"></div>
+    <div id="wrapper">
+      <header id="header">
+        <div class="inner">
+          <nav id="gnb">
+            <a href="#section-2" onclick="naviClickFn('section-2'); return false;">CEO인사말</a>
+            <a href="#section-6-link" onclick="naviClickFn('section-6-link'); return false;"
+              >실제매출</a
+            >
+            <a href="#section-11-link" onclick="naviClickFn('section-11-link'); return false;"
+              >업계 최저<br />원가율</a
+            >
+            <h1>
+              <a href="#section-1" onclick="naviClickFn('section-1'); return false;">
+                <img src="/assets/images/logo.png" alt="logo" />
+              </a>
+            </h1>
+            <a href="#section-11" onclick="naviClickFn('section-11'); return false;"
+              >본사마진<br />0원 물류</a
+            >
+            <a href="#section-12-link" onclick="naviClickFn('section-12-link'); return false;"
+              >100%창업비<br />환불제도</a
+            >
+            <a href="#section-14-link" onclick="naviClickFn('section-14-link'); return false;"
+              >1금융권<br />창업비 대출</a
+            >
+          </nav>
+        </div>
+      </header>
+      <main id="main">
+        <section
+          id="section-1"
+          style="background-image: url('/assets/images/section_1_background.png')"
+        >
+          <div class="inner">
+            <div class="main-text">
+              <span>인정받는 브랜드가치!</span>
+              <img src="/assets/images/m_section_1_title.png" alt="section_1_title" />
+              <p>
+                코로나19 극복을 위한 가맹점주의 비용 분담<br />
+                지원이 확인된 가맹본부(착한 프랜차이즈) 입니다.
+              </p>
+            </div>
+            <ul class="medals">
+              <li><img src="/assets/images/m_section_1_medal_1.png" alt="medal_1" /></li>
+              <li><img src="/assets/images/m_section_1_medal_2.png" alt="medal_2" /></li>
+              <li><img src="/assets/images/section_1_testimonial.png" alt="testimonial" /></li>
+              <li><img src="/assets/images/m_section_1_medal_3.png" alt="medal_3" /></li>
+              <li><img src="/assets/images/m_section_1_medal_4.png" alt="medal_4" /></li>
+            </ul>
+          </div>
+        </section>
+        <section
+          id="section-2"
+          style="background-image: url('/assets/images/section_2_background.png')"
+        >
+          <div class="inner">
+            <span class="title">400개 이상 개설한 가맹 전문가</span>
+            <img src="/assets/images/section_2_title.png" alt="m_section_2_title" />
+            <ul>
+              <li>첫째, 쉽지 않은 시장 속 상생을 중요시 하는 파트너가 되겠습니다.</li>
+              <li>둘째, 불편사항이 생기신다면 제가 직접 발벗고 뛰어 가겠습니다.</li>
+              <li>셋째, 계약 전 꼭 점주님을 찾아가 믿음을 보여드리겠습니다.</li>
+            </ul>
+            <p>
+              오픈만하고 소통이 안되는 다른 프랜차이즈와 달리!<br />
+              모든 가맹점주님들과 “상생”을 위해 제가 직접 누구보다 더 발로 뛰고<br />
+              노력하여 성공의 파트너가 될 수 있게 하겠습니다.
+            </p>
+          </div>
+        </section>
+        <section
+          id="section-3"
+          style="background-image: url('/assets/images/section_3_background.png')"
+        >
+          <div class="inner">
+            <img src="/assets/images/m_section_3_title.png" class="title" alt="title" />
+            <img src="/assets/images/section_3_contents.png" class="contents" alt="contents" />
+            <img src="/assets/images/section_3_img.png" class="img" alt="img" />
+            <img src="/assets/images/section_3_text.png" class="text" alt="text" />
+          </div>
+        </section>
+        <section
+          id="section-4"
+          style="background-image: url('/assets/images/section_4_background.png')"
+        >
+          <div class="inner">
+            <span>지금은 배 / 달 / 호 / 황 / 시 / 대</span>
+            <img src="/assets/images/section_4_title.png" class="title" alt="title" />
+            <img src="/assets/images/m_section_4_contents.png" class="contents" alt="contents" />
+            <ul>
+              <li><img src="/assets/images/section_4_list_1.png" alt="list_1" /></li>
+              <li><img src="/assets/images/section_4_list_2.png" alt="list_2" /></li>
+              <li><img src="/assets/images/section_4_list_3.png" alt="list_3" /></li>
+            </ul>
+          </div>
+        </section>
+        <section
+          id="section-5"
+          style="background-image: url('/assets/images/section_5_background.png')"
+        >
+          <div class="inner">
+            <img src="/assets/images/section_5_title.png" class="title" alt="title" />
+            <ol>
+              <li><img src="/assets/images/section_5_number_1.png" alt="1" /> 가맹비 50% 지원</li>
+              <li><img src="/assets/images/section_5_number_2.png" alt="2" /> 교육비 50% 지원</li>
+              <li>
+                <img src="/assets/images/section_5_number_3.png" alt="3" /> 물류 보증금 완전 면제
+              </li>
+              <li>
+                <img src="/assets/images/section_5_number_4.png" alt="4" /> 창업비 100% 환불보장
+              </li>
+              <li><img src="/assets/images/section_5_number_5.png" alt="5" /> 최소 매출 보장</li>
+              <li>
+                <img src="/assets/images/section_5_number_6.png" alt="6" /> 1금융 창업비 대출 지원
+              </li>
+            </ol>
+          </div>
+        </section>
+        <img
+          id="section-6-link"
+          src="/assets/images/section_6_title.png"
+          class="title"
+          alt="title"
+        />
+        <section
+          id="section-6"
+          style="background-image: url('/assets/images/m_section_6_background.png')"
+        >
+          <div class="inner">
+            <h5>오픈 하자마자 주문건 수 100건 이상!</h5>
+            <img src="/assets/images/m_section_6_title_2.png" class="title-2" alt="title_2" />
+            <div>
+              <img src="/assets/images/section_6_graph.png" alt="graph" />
+              <img src="/assets/images/m_section_6_recipe.png" alt="recipe" />
+            </div>
+          </div>
+        </section>
+        <img
+          id="section-7-link"
+          src="/assets/images/section_7_title.png"
+          class="title"
+          alt="title"
+        />
+        <section
+          id="section-7"
+          style="background-image: url('/assets/images/section_7_background.png')"
+        >
+          <div class="inner">
+            <div class="row">
+              <div class="text">
+                <img src="/assets/images/section_7_title_2.png" class="title-2" alt="title" />
+                <p>업계 최저수준인 20%대의 원가율로</p>
+                <span>최고 수익률을 만들었습니다!</span>
+              </div>
+              <img src="/assets/images/section_7_contents.png" class="contents" alt="contents" />
+            </div>
+            <div class="row">
+              <img src="/assets/images/section_7_truck.png" class="truck" alt="truck" />
+              <div class="text-2">
+                <img src="/assets/images/section_7_title_3.png" class="title-3" alt="title" />
+                <p>배달요정은 가맹점주님과 상생을 위해</p>
+                <span>물류에 단 1원도 본사마진을 남기지 않고</span>
+                <p>원가에 공급 해드리고 있기 때문에<br />업계 최저 원가율을 만들었습니다.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <img src="/assets/images/section_8_title.png" alt="title" class="title" />
+        <section
+          id="section-8"
+          style="background-image: url('/assets/images/section_8_background.png')"
+        >
+          <div class="inner">
+            <h5>깔끔하고 맛있는 소스 개발 노하우로</h5>
+            <img src="/assets/images/m_section_8_title_2.png" alt="title" class="title_1" />
+            <div class="box">
+              <img src="/assets/images/m_section_8_title_3.png" alt="title" class="title_2" />
+              <ul>
+                <li><img src="/assets/images/m_section_8_list_1.png" alt="list_1" /></li>
+                <li><img src="/assets/images/section_8_dots.png" alt="dots" /></li>
+                <li><img src="/assets/images/m_section_8_list_2.png" alt="list_2" /></li>
+                <li><img src="/assets/images/section_8_dots.png" alt="dots" /></li>
+                <li><img src="/assets/images/m_section_8_list_3.png" alt="list_3" /></li>
+                <li><img src="/assets/images/section_8_dots.png" alt="dots" /></li>
+                <li><img src="/assets/images/m_section_8_list_4.png" alt="list_4" /></li>
+              </ul>
+              <div class="slider-wrapper">
+                <div class="text-area">
+                  <div class="text">
+                    <img src="/assets/images/m_section_8_title_4.png" alt="title" class="title_4" />
+                    <p>
+                      중앙집중식 식품생산시스템(CAFPS)을 통해<br />
+                      품질, 위행, 중량, 규격 등이 표준화된 제품으로 공급하여<br />
+                      좋은 품질의 제품을 낮은 원가로 공급할 수 있습니다.
+                    </p>
+                  </div>
+                  <img src="/assets/images/section_8_truck.png" class="truck" alt="truck" />
+                </div>
+                <!-- Slider main container -->
+                <div class="swiper-container" id="section-8-slider">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <img src="/assets/images/m_section_8_slide_1.png" alt="slide_1" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/assets/images/m_section_8_slide_2.png" alt="slide_2" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/assets/images/m_section_8_slide_3.png" alt="slide_3" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/assets/images/m_section_8_slide_4.png" alt="slide_4" />
+                    </div>
+                  </div>
+                </div>
+                <script>
+                  new Swiper("#section-8-slider", {
+                    slidesPerView: "auto",
+                    freeMode: true,
+                    loop: true,
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          id="section-9"
+          style="background-image: url('/assets/images/section_9_background.png')"
+        >
+          <img src="/assets/images/m_section_9_title.png" class="title" alt="title" />
+          <!-- Slider main container -->
+          <div class="swiper-container" id="section-9-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="/assets/images/m_section_9_slide_1.jpg" alt="slide_1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/assets/images/m_section_9_slide_2.jpg" alt="slide_2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/assets/images/m_section_9_slide_3.jpg" alt="slide_3" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/assets/images/m_section_9_slide_4.jpg" alt="slide_4" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/assets/images/m_section_9_slide_5.jpg" alt="slide_5" />
+              </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="navigation">
+              <div class="swiper-button-prev"></div>
+              <img src="/assets/images/m_section_9_sticker.png" class="sticker" alt="sticker" />
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <script>
+            new Swiper("#section-9-slider", {
+              centeredSlides: true,
+              spaceBetween: -50,
+              slidesPerView: "auto",
+              navigation: {
+                nextEl: "#section-9-slider .swiper-button-next",
+                prevEl: "#section-9-slider .swiper-button-prev",
+              },
+              loop: true,
+            });
+          </script>
+        </section>
+        <section
+          id="section-10"
+          style="background-image: url('/assets/images/section_10_background.png')"
+        >
+          <img src="/assets/images/m_section_10_bubble.png" class="bubble" alt="bubble" />
+          <h5>외식소비 트렌드에 맞춰 <b>매월 1개이상 출시되는 신메뉴</b></h5>
+          <img src="/assets/images/m_section_10_title.png" class="title" alt="title" />
+          <img src="/assets/images/section_10_contents.png" class="contents" alt="contents" />
+        </section>
+        <img
+          id="section-11-link"
+          src="/assets/images/section_11_title.png"
+          class="title"
+          alt="title"
+        />
+        <section
+          id="section-11"
+          style="background-image: url('/assets/images/section_11_background.png')"
+        >
+          <div class="inner">
+            <img src="/assets/images/section_11_title_2.png" class="title" alt="title" />
+            <p class="text">
+              전략적 배달 어플 운영은 매출 상승의 핵심 포인트 입니다.<br />
+              <b>배달요정의 어플 전문관리팀</b>으로 <b>매출의 극대화</b>를 보여드리겠습니다.
+            </p>
+            <ul class="question-list">
+              <li><img src="/assets/images/m_section_11_question_1.png" alt="question_1" /></li>
+              <li><img src="/assets/images/m_section_11_question_2.png" alt="question_2" /></li>
+              <li><img src="/assets/images/m_section_11_question_3.png" alt="question_3" /></li>
+            </ul>
+            <img src="/assets/images/section_11_title_3.png" class="title_3" alt="title" />
+            <ul class="list">
+              <li><img src="/assets/images/m_section_11_list_1.png" alt="list_1" /></li>
+              <li><img src="/assets/images/m_section_11_list_2.png" alt="list_2" /></li>
+              <li><img src="/assets/images/m_section_11_list_3.png" alt="list_3" /></li>
+              <li><img src="/assets/images/m_section_11_list_4.png" alt="list_4" /></li>
+            </ul>
+            <img src="/assets/images/section_11_title_4.png" class="title_4" alt="title" />
+          </div>
+        </section>
+        <img
+          id="section-12-link"
+          src="/assets/images/section_12_title.png"
+          class="title"
+          alt="title"
+        />
+        <section
+          id="section-12"
+          style="background-image: url('/assets/images/section_12_background.png')"
+        >
+          <div class="inner">
+            <h5>더이상 말로 하지 않겠습니다. 100% 매출 보장!</h5>
+            <img src="/assets/images/section_12_title_2.png" class="title_2" alt="title" />
+            <p>
+              오픈 후 6개월 안에 목표한 매출이 나오지 않을 시<br />
+              <b>창업비용을 100% 환불</b>해주는 제도입니다.
+            </p>
+            <img
+              src="/assets/images/m_section_12_testimonial.png"
+              class="testimonial"
+              alt="testimonial"
+            />
+          </div>
+        </section>
+        <section id="section-13">
+          <div class="inner">
+            <div class="row">
+              <img src="/assets/images/section_13_title.png" class="title" alt="title" />
+              <div class="timer">
+                <script>
+                  function remaindTime() {
+                    var now = new Date();
+                    var end = new Date(
+                      now.getFullYear(),
+                      now.getMonth(),
+                      now.getDate(),
+                      24,
+                      00,
+                      00
+                    );
+                    var open = new Date(
+                      now.getFullYear(),
+                      now.getMonth(),
+                      now.getDate(),
+                      24,
+                      00,
+                      00
+                    );
+
+                    var nt = now.getTime();
+                    var ot = open.getTime();
+                    var et = end.getTime();
+
+                    $(".time").fadeIn();
+                    sec = parseInt(et - nt) / 1000;
+                    day = parseInt(sec / 60 / 60 / 24);
+                    sec = sec - day * 60 * 60 * 24;
+                    hour = parseInt(sec / 60 / 60);
+                    sec = sec - hour * 60 * 60;
+                    min = parseInt(sec / 60);
+                    sec = parseInt(sec - min * 60);
+                    if (hour < 10) {
+                      hour = "0" + hour;
+                    }
+                    if (min < 10) {
+                      min = "0" + min;
+                    }
+                    if (sec < 10) {
+                      sec = "0" + sec;
+                    }
+                    hour += "";
+                    min += "";
+                    sec += "";
+                    $("#hours_1").html(hour.substr(0, 1));
+                    $("#hours_2").html(hour.substr(1, 1));
+                    $("#minutes_1").html(min.substr(0, 1));
+                    $("#minutes_2").html(min.substr(1, 1));
+                    $("#seconds_1").html(sec.substr(0, 1));
+                    $("#seconds_2").html(sec.substr(1, 1));
+                  }
+                  setInterval(remaindTime, 1000);
+                </script>
+                <span id="hours_1">0</span>
+                <span id="hours_2">0</span>
+                <b>:</b>
+                <span id="minutes_1">0</span>
+                <span id="minutes_2">0</span>
+                <b>:</b>
+                <span id="seconds_1">0</span>
+                <span id="seconds_2">0</span>
+              </div>
+            </div>
+
+            <form action="" name="frm_2" id="frm_2">
+              <input type="hidden" name="uid" value="" />
+              <input type="hidden" name="w" value="" />
+              <input type="hidden" name="bo_table" value="coverage" />
+              <input type="hidden" name="wr_id" value="0" />
+              <input type="hidden" name="wr_subject" value="창업비 보장 신청" />
+              <input type="hidden" name="wr_content" value="창업비 보장 신청" />
+              <input type="hidden" id="wr_email" name="wr_email" value="" />
+              <input type="hidden" name="wr_homepage" value="" />
+              <div class="input-area">
+                <div class="input-row">
+                  <div class="input">
+                    <label for="frm_2_wr_name">이름</label>
+                    <input type="text" name="wr_name" id="frm_2_wr_name" placeholder="이름" />
+                  </div>
+                  <div class="input">
+                    <label for="frm_2_wr_1">연락처</label>
+                    <input
+                      type="text"
+                      name="wr_1"
+                      id="frm_2_wr_1"
+                      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                      placeholder="연락처"
+                      maxlength="11"
+                    />
+                  </div>
+                </div>
+                <div class="input-row">
+                  <div class="input">
+                    <label for="frm_2_wr_2">희망지역</label>
+                    <input type="text" id="frm_2_wr_2" name="wr_2" placeholder="희망지역" />
+                  </div>
+                </div>
+
+                <div class="agree-area">
+                  <div class="check">
+                    <input type="checkbox" name="agree_1" id="frm_2_agree_1" checked />
+                    <label for="frm_2_agree_1">개인정보 수집/이용방침 동의</label>
+                  </div>
+                </div>
+              </div>
+              <button type="submit">
+                <img src="/assets/images/m_section_13_submit.png" id="frm_2_submit" alt="submit" />
+              </button>
+            </form>
+            <script>
+              $(function () {
+                $("#frm_2_submit").click(function (e) {
+                  e.preventDefault();
+                  if ($.trim($("#frm_2_wr_name").val()) == "") {
+                    alert("이름을 입력하세요.");
+                    $("#frm_2_wr_name").focus();
+                    return false;
+                  }
+
+                  if ($.trim($("#frm_2_wr_1").val()) == "") {
+                    alert("연락처를 입력하세요.");
+                    $("#frm_2_wr_1").focus();
+                    return false;
+                  }
+
+                  if (!$("#frm_2_agree_1").is(":checked")) {
+                    alert("개인정보보호취급방침에 동의해주세요.");
+                    $("#frm_2_agree_1").focus();
+                    return false;
+                  }
+
+                  var token = get_write_token(frm_2.bo_table.value);
+                  if (!token) {
+                    alert("토큰 정보가 올바르지 않습니다.");
+                    return false;
+                  }
+
+                  if (!regNumExp.test($("#frm_2_wr_1").val())) {
+                    alert("잘못된 휴대폰 번호입니다. 숫자만 입력하세요.");
+                    $("#frm_2_wr_1").focus();
+                    return false;
+                  }
+
+                  $.ajax({
+                    url: "/g5/bbs/ajax.write_update.php",
+                    type: "POST",
+                    data: {
+                      uid: frm_2.uid.value,
+                      w: frm_2.w.value,
+                      bo_table: frm_2.bo_table.value,
+                      wr_id: frm_2.wr_id.value,
+                      wr_subject: frm_2.wr_subject.value,
+                      wr_name: frm_2.wr_name.value,
+                      wr_1: frm_2.wr_1.value,
+                      wr_2: frm_2.wr_2.value,
+                      wr_email: frm_2.wr_email.value,
+                      wr_homepage: frm_2.wr_homepage.value,
+                      wr_content: frm_2.wr_content.value,
+                      token: token,
+                    },
+                    dataType: "text",
+                    error: function (xhr, status, error) {
+                      switch (xhr.status) {
+                        case 400:
+                          alert("자동등록방지 숫자가 틀렸습니다.");
+                          break;
+                        default:
+                          alert(error);
+                      }
+                    },
+                    async: false,
+                    cache: false,
+                    success: function (data) {
+                      alert("등록완료!");
+                    },
+                  });
+                });
+              });
+            </script>
+            <img src="/assets/images/section_13_call.png" class="call" alt="call" />
+          </div>
+        </section>
+        <img
+          id="section-14-link"
+          src="/assets/images/section_14_title.png"
+          class="title"
+          alt="title"
+        />
+        <section id="section-14">
+          <div class="inner">
+            <img src="/assets/images/section_14_title_2.png" class="title_2" alt="title" />
+            <div class="box">
+              <div class="box_1">
+                <img src="/assets/images/section_14_testimonial.png" class="img" alt="img" />
+                <span>1금융권 대출 확인서</span>
+                <img src="/assets/images/m_section_14_title_3.png" class="title" alt="title" />
+                <p>
+                  1금융 은행사와 업무 협약 및 높은 신용평가로<br />
+                  <b>업계 최대 1금융권 대출 금액을 저금리로 안전하게 지원</b>해드립니다.
+                </p>
+              </div>
+              <img src="/assets/images/section_14_more.png" class="more" alt="more" />
+              <div class="box_2">
+                <img src="/assets/images/m_section_14_img.png" class="img" alt="img" />
+                <span>업계 최저 투자비</span>
+                <img src="/assets/images/m_section_14_title_4.png" class="title" alt="title" />
+                <p>
+                  소자본으로 창업이 가능할 뿐만 아니라 현실성있게<br />
+                  <b>창업자의 자금계획에 맞춰 설계</b>를 도와드리고 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <img src="/assets/images/section_15_title.png" class="title" alt="title" />
+        <section
+          id="section-15"
+          style="background-image: url('/assets/images/section_15_background.png')"
+        >
+          <div class="inner">
+            <img src="/assets/images/m_section_15_label.png" class="label" alt="label" />
+            <img src="/assets/images/section_15_title_2.png" class="title_2" alt="title" />
+            <img src="/assets/images/section_15_title_3.png" class="title_3" alt="title" />
+            <div class="box">
+              <ul>
+                <li><img src="/assets/images/section_15_list_1.png" alt="list_1" /></li>
+                <li><img src="/assets/images/section_15_dots.png" alt="dots" /></li>
+                <li><img src="/assets/images/section_15_list_2.png" alt="list_2" /></li>
+                <li><img src="/assets/images/section_15_dots.png" alt="dots" /></li>
+                <li><img src="/assets/images/section_15_list_3.png" alt="list_3" /></li>
+              </ul>
+            </div>
+            <p class="text">
+              배달요정은 원팩, 원쿠킹 방식으로<br />
+              <b>누구나 쉽고 간단하게 조리할 수 있어 최소한의 인력으로 운영</b>이 가능합니다.
+            </p>
+          </div>
+        </section>
+        <section id="section-16">
+          <div class="inner">
+            <img src="/assets/images/m_section_16_label.png" alt="label" class="label" />
+            <img src="/assets/images/section_16_title.png" alt="title" class="title" />
+            <div class="box" style="background-image: url('/assets/images/section_16_box.png')">
+              <ul>
+                <li>
+                  <div class="img">
+                    <img src="/assets/images/m_section_16_list_1.png" alt="list_1" />
+                  </div>
+                  <div class="text">
+                    <img src="/assets/images/m_section_16_list_num_1.png" class="num" alt="01" />
+                    <p>가맹점 상생 ‘3-Step’<br /><b>1:1 밀착 매장 관리 시스템 운영</b></p>
+                  </div>
+                </li>
+                <li>
+                  <div class="img">
+                    <img src="/assets/images/m_section_16_list_2.png" alt="list_2" />
+                  </div>
+                  <div class="text">
+                    <img src="/assets/images/m_section_16_list_num_2.png" class="num" alt="02" />
+                    <p>
+                      매출이 부진한 가맹점이<br />
+                      한 곳도 발생하지 않도록<br />
+                      <b>가맹점 119 시스템 구축</b>
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div class="img">
+                    <img src="/assets/images/m_section_16_list_3.png" alt="list_3" />
+                  </div>
+                  <div class="text">
+                    <img src="/assets/images/m_section_16_list_num_3.png" class="num" alt="03" />
+                    <p>
+                      <b>전문화된 교육 시스템</b>으로<br />
+                      초보창업자누구나 창업 OK!
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div class="img">
+                    <img src="/assets/images/m_section_16_list_4.png" alt="list_4" />
+                  </div>
+                  <div class="text">
+                    <img src="/assets/images/m_section_16_list_num_4.png" class="num" alt="04" />
+                    <p>
+                      안정적인 물류업체 제휴를 통한<br />
+                      <b>최적의 물류 시스템 구축</b>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section
+          id="section-17"
+          style="background-image: url('/assets/images/m_section_17_background.png')"
+        >
+          <div class="inner">
+            <img src="/assets/images/m_section_17_label.png" alt="label" class="label" />
+            <img src="/assets/images/section_17_title.png" alt="title" class="title" />
+            <p><b>지역, 상권, 연령</b>에 따른 세분화된 <b>타겟, 스폰, 지역</b> 마케팅 지원</p>
+            <ul>
+              <li><img src="/assets/images/section_17_list_1.png" alt="list_1" /></li>
+              <li><img src="/assets/images/section_17_list_2.png" alt="list_2" /></li>
+              <li><img src="/assets/images/section_17_list_3.png" alt="list_3" /></li>
+            </ul>
+          </div>
+        </section>
+        <section
+          id="section-18"
+          style="background-image: url('/assets/images/section_18_background.png')"
+        >
+          <div class="inner">
+            <img src="/assets/images/m_section_18_label.png" alt="label" class="label" />
+            <img src="/assets/images/section_18_title.png" alt="title" class="title" />
+            <div
+              class="box-1"
+              style="background-image: url('/assets/images/section_18_list_1.png')"
+            >
+              <ul>
+                <li>
+                  <img src="/assets/images/m_section_18_list_1_1.png" alt="list_1_1" />
+                </li>
+                <li><img src="/assets/images/m_section_18_dots.png" class="dots" alt="dots" /></li>
+                <li>
+                  <img src="/assets/images/m_section_18_list_1_2.png" alt="list_1_2" />
+                </li>
+                <li><img src="/assets/images/m_section_18_dots.png" class="dots" alt="dots" /></li>
+                <li>
+                  <img src="/assets/images/m_section_18_list_1_3.png" alt="list_1_3" />
+                </li>
+              </ul>
+            </div>
+            <div
+              class="box-2"
+              style="background-image: url('/assets/images/section_18_list_2.png')"
+            >
+              <ul>
+                <li>
+                  <img src="/assets/images/m_section_18_list_2_1.png" alt="list_2_1" />
+                </li>
+                <li>
+                  <img src="/assets/images/m_section_18_list_2_2.png" alt="list_2_2" />
+                </li>
+                <li>
+                  <img src="/assets/images/m_section_18_list_2_3.png" alt="list_2_3" />
+                </li>
+                <li>
+                  <img src="/assets/images/section_18_list_2_4.png" alt="list_2_4" />
+                </li>
+                <li>
+                  <img src="/assets/images/m_section_18_list_2_5.png" alt="list_2_5" />
+                </li>
+                <li>
+                  <img src="/assets/images/m_section_18_list_2_6.png" alt="list_2_6" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section
+          id="section-19"
+          style="background-image: url('/assets/images/section_19_background.png')"
+        >
+          <p>배달호황시대에 누구나 하는 똑같은 창업으로는 성공할 수 없습니다.</p>
+          <img src="/assets/images/m_section_19_title.png" class="title" alt="title" />
+          <div class="box">
+            <img src="/assets/images/section_19_img_1.png" class="img_1" alt="img_1" />
+            <div class="vs">
+              <img src="/assets/images/m_section_19_vs.png" alt="vs" />
+            </div>
+            <img src="/assets/images/section_19_img_2.png" class="img_2" alt="img_2" />
+          </div>
+        </section>
+        <section
+          id="section-20"
+          style="background-image: url('/assets/images/m_section_20_background.png')"
+        >
+          <div class="inner">
+            <img src="/assets/images/m_section_20_title.png" alt="title" class="title" />
+            <img src="/assets/images/m_section_20_table.png" class="table" alt="table" />
+            <div class="form-area">
+              <img
+                src="/assets/images/m_section_20_form_title.png"
+                alt="form-title"
+                class="form-title"
+              />
+              <form action="" name="frm_3" id="frm_3">
+                <input type="hidden" name="uid" value="" />
+                <input type="hidden" name="w" value="" />
+                <input type="hidden" name="bo_table" value="startup_inquiry" />
+                <input type="hidden" name="wr_id" value="0" />
+                <input type="hidden" name="wr_subject" value="배달요정 창업 문의" />
+                <input type="hidden" name="wr_content" value="배달요정 창업 문의" />
+                <input type="hidden" id="wr_email" name="wr_email" value="" />
+                <input type="hidden" name="wr_homepage" value="" />
+                <div class="input-area">
+                  <div class="input-row">
+                    <label for="frm_3_wr_name">이름</label>
+                    <input type="text" id="frm_3_wr_name" name="wr_name" placeholder="이름" />
+                  </div>
+                  <div class="input-row">
+                    <label for="frm_3_wr_wr_2">희망지역</label>
+                    <input type="text" id="frm_3_wr_wr_2" name="wr_2" placeholder="희망지역" />
+                  </div>
+                  <div class="input-row">
+                    <label for="frm_3_wr_wr_1">연락처</label>
+                    <input
+                      type="text"
+                      id="frm_3_wr_1"
+                      name="wr_1"
+                      placeholder="연락처"
+                      oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                      maxlength="11"
+                    />
+                  </div>
+                  <div class="input-row">
+                    <label for="frm_3_wr_3">창업예정</label>
+                    <input type="text" id="frm_3_wr_3" name="wr_3" placeholder="창업예정" />
+                  </div>
+                  <div class="check-area">
+                    <div>
+                      <input type="checkbox" id="frm_3_agree_1" checked />
+                      <label for="frm_3_agree_1">개인정보취급방침에 동의</label>
+                      <a href="">전문보기</a>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="frm_3_agree_2" checked />
+                      <label for="frm_3_agree_2">마케팅 활용 동의</label>
+                      <a href="">전문보기</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="submit-area">
+                  <button type="submit" id="frm_3_submit">
+                    <img src="/assets/images/section_20_submit.png" alt="submit" />
+                  </button>
+                </div>
+              </form>
+              <script>
+                $(function () {
+                  $("#frm_3_submit").click(function (e) {
+                    e.preventDefault();
+                    if ($.trim($("#frm_3_wr_name").val()) == "") {
+                      alert("이름을 입력하세요.");
+                      $("#frm_3_wr_name").focus();
+                      return false;
+                    }
+
+                    if ($.trim($("#frm_3_wr_1").val()) == "") {
+                      alert("연락처를 입력하세요.");
+                      $("#frm_3_wr_1").focus();
+                      return false;
+                    }
+
+                    if (!$("#frm_3_agree_1").is(":checked")) {
+                      alert("개인정보보호취급방침에 동의해주세요.");
+                      $("#frm_3_agree_1").focus();
+                      return false;
+                    }
+
+                    if (!$("#frm_3_agree_2").is(":checked")) {
+                      alert("마케팅 활용에 동의해주세요.");
+                      $("#frm_3_agree_2").focus();
+                      return false;
+                    }
+
+                    var token = get_write_token(frm_3.bo_table.value);
+                    if (!token) {
+                      alert("토큰 정보가 올바르지 않습니다.");
+                      return false;
+                    }
+
+                    if (!regNumExp.test($("#frm_3_wr_1").val())) {
+                      alert("잘못된 휴대폰 번호입니다. 숫자만 입력하세요.");
+                      $("#frm_3_wr_1").focus();
+                      return false;
+                    }
+
+                    $.ajax({
+                      url: "/g5/bbs/ajax.write_update.php",
+                      type: "POST",
+                      data: {
+                        uid: frm_3.uid.value,
+                        w: frm_3.w.value,
+                        bo_table: frm_3.bo_table.value,
+                        wr_id: frm_3.wr_id.value,
+                        wr_subject: frm_3.wr_subject.value,
+                        wr_name: frm_3.wr_name.value,
+                        wr_1: frm_3.wr_1.value,
+                        wr_2: frm_3.wr_2.value,
+                        wr_3: frm_3.wr_3.value,
+                        wr_email: frm_3.wr_email.value,
+                        wr_homepage: frm_3.wr_homepage.value,
+                        wr_content: frm_3.wr_content.value,
+                        token: token,
+                      },
+                      dataType: "text",
+                      error: function (xhr, status, error) {
+                        switch (xhr.status) {
+                          case 400:
+                            alert("자동등록방지 숫자가 틀렸습니다.");
+                            break;
+                          default:
+                            alert(error);
+                        }
+                      },
+                      async: false,
+                      cache: false,
+                      success: function (data) {
+                        alert("등록완료!");
+                      },
+                    });
+                  });
+                });
+              </script>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- <div class="fix-area">
+        <form action="" name="frm_1" id="frm_1">
+          <input type="hidden" name="uid" value="" />
+          <input type="hidden" name="w" value="" />
+          <input type="hidden" name="bo_table" value="fix_form" />
+          <input type="hidden" name="wr_id" value="0" />
+          <input type="hidden" name="wr_subject" value="하단 픽스 창구" />
+          <input type="hidden" name="wr_content" value="하단 픽스 창구" />
+          <input type="hidden" id="wr_email" name="wr_email" value="" />
+          <input type="hidden" name="wr_homepage" value="" />
+          <div class="input-area">
+            <input type="text" name="wr_name" id="frm_1_wr_name" placeholder="이름" />
+            <input
+              type="text"
+              name="wr_1"
+              id="frm_1_wr_1"
+              placeholder="연락처"
+              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+              maxlength="11"
+            />
+            <select name="wr_2" id="frm_1_wr_2">
+              <option value="서울특별시">서울특별시</option>
+              <option value="경기도">경기도</option>
+              <option value="부산광역시">부산광역시</option>
+              <option value="대구광역시">대구광역시</option>
+              <option value="광주광역시">광주광역시</option>
+              <option value="인천광역시">인천광역시</option>
+              <option value="대전광역시">대전광역시</option>
+              <option value="울산광역시">울산광역시</option>
+              <option value="세종특별자치시">세종특별자치시</option>
+              <option value="강원도">강원도</option>
+              <option value="충청북도">충청북도</option>
+              <option value="충청남도">충청남도</option>
+              <option value="전라북도">전라북도</option>
+              <option value="전라남도">전라남도</option>
+              <option value="경상북도">경상북도</option>
+              <option value="경상남도">경상남도</option>
+              <option value="제주특별자치도">제주특별자치도</option>
+              <option value="선택안함">선택안함</option>
+            </select>
+          </div>
+          <div class="submit-area">
+            <div>
+              <input type="checkbox" id="frm_1_agree_1" checked />
+              <label for="frm_1_agree_1">개인정보취급방침에 동의</label>
+              <a href="">전문보기</a>
+            </div>
+            <div>
+              <input type="checkbox" id="frm_1_agree_2" checked />
+              <label for="frm_1_agree_2">마케팅 활용 동의</label>
+              <a href="">전문보기</a>
+            </div>
+            <button type="submit" id="frm_1_submit">접수하기</button>
+          </div>
+        </form>
+        <script>
+          $(function () {
+            $("#frm_1_submit").click(function (e) {
+              e.preventDefault();
+              if ($.trim($("#frm_1_wr_name").val()) == "") {
+                alert("이름을 입력하세요.");
+                $("#frm_1_wr_name").focus();
+                return false;
+              }
+
+              if ($.trim($("#frm_1_wr_1").val()) == "") {
+                alert("연락처를 입력하세요.");
+                $("#frm_1_wr_1").focus();
+                return false;
+              }
+
+              if (!$("#frm_1_agree_1").is(":checked")) {
+                alert("개인정보보호취급방침에 동의해주세요.");
+                $("#frm_1_agree_1").focus();
+                return false;
+              }
+
+              if (!$("#frm_1_agree_2").is(":checked")) {
+                alert("마케팅 활용에 동의해주세요.");
+                $("#frm_1_agree_2").focus();
+                return false;
+              }
+
+              var token = get_write_token(frm_1.bo_table.value);
+              if (!token) {
+                alert("토큰 정보가 올바르지 않습니다.");
+                return false;
+              }
+
+              if (!regNumExp.test($("#frm_1_wr_1").val())) {
+                alert("잘못된 휴대폰 번호입니다. 숫자만 입력하세요.");
+                $("#frm_1_wr_1").focus();
+                return false;
+              }
+
+              $.ajax({
+                url: "/g5/bbs/ajax.write_update.php",
+                type: "POST",
+                data: {
+                  uid: frm_1.uid.value,
+                  w: frm_1.w.value,
+                  bo_table: frm_1.bo_table.value,
+                  wr_id: frm_1.wr_id.value,
+                  wr_subject: frm_1.wr_subject.value,
+                  wr_name: frm_1.wr_name.value,
+                  wr_1: frm_1.wr_1.value,
+                  wr_2: frm_1.wr_2.value,
+                  wr_email: frm_1.wr_email.value,
+                  wr_homepage: frm_1.wr_homepage.value,
+                  wr_content: frm_1.wr_content.value,
+                  token: token,
+                },
+                dataType: "text",
+                error: function (xhr, status, error) {
+                  switch (xhr.status) {
+                    case 400:
+                      alert("자동등록방지 숫자가 틀렸습니다.");
+                      break;
+                    default:
+                      alert(error);
+                  }
+                },
+                async: false,
+                cache: false,
+                success: function (data) {
+                  alert("등록완료!");
+                },
+              });
+            });
+          });
+        </script>
+      </div> -->
+    </div>
   </body>
 </html>

@@ -190,9 +190,17 @@ body {
         margin: 0 auto 1.5rem;
       }
       .contents {
-        width: 75%;
-        display: block;
-        margin: 0 auto;
+        text-align: center;
+        color: #ffffff;
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+        b {
+          font-weight: bold;
+        }
+        strong {
+          font-size: 2rem;
+          color: #f5dc3a;
+        }
       }
     }
     #section-6 {
@@ -685,7 +693,6 @@ body {
     }
     #section-15 {
       padding: 2.5rem 2rem 5rem;
-
       .label {
         height: 1.5rem;
         display: block;
@@ -794,6 +801,14 @@ body {
         display: block;
         margin: 0 auto 1rem;
       }
+      p {
+        font-size: 1.2rem;
+        color: #ffffff;
+        text-align: center;
+        b {
+          font-weight: bold;
+        }
+      }
       ul {
         li {
           img {
@@ -818,7 +833,7 @@ body {
         margin: 0 auto 3rem;
       }
       .box-1 {
-        padding: 3rem 3rem;
+        padding: 3.3rem 3rem;
         box-sizing: border-box;
         margin-bottom: 2.5rem;
         background-size: cover;
@@ -843,7 +858,7 @@ body {
         }
       }
       .box-2 {
-        padding: 5rem 1rem 0.5rem;
+        padding: 10rem 1rem 0.5rem;
         box-sizing: border-box;
         margin-bottom: 2.5rem;
         background-size: cover;

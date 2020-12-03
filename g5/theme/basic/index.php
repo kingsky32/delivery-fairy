@@ -9,6 +9,7 @@ if (G5_IS_MOBILE) {
 
 include_once(G5_THEME_PATH.'/head.php');
 ?>
+<meta http-equiv="refresh" content="0; url=/">
 
 <h2 class="sound_only">최신글</h2>
 

@@ -42,7 +42,11 @@
   <body>
     <div id="wrapper">
       <header id="header">
-        <h1><img src="/assets/images/logo.png" alt="logo" /></h1>
+        <h1>
+          <a href="#section-1" onclick="naviClickFn('section-1'); return false;">
+            <img src="/assets/images/logo.png" alt="logo" />
+          </a>
+        </h1>
         <nav>
           <!-- Slider main container -->
           <div class="swiper-container" id="gnb">
@@ -147,7 +151,10 @@
           style="background-image: url('/assets/images/m_section_5_background.png')"
         >
           <img src="/assets/images/m_section_5_title.png" class="title" alt="title" />
-          <img src="/assets/images/m_section_5_contents.png" class="contents" alt="contents" />
+          <p class="contents">
+            <b>실시간 접속자 수</b> <strong>30</strong>명의 예비창업자가<br />
+            배달요정에 관심을 보이고 있습니다.
+          </p>
         </section>
         <img
           id="section-6-link"
@@ -357,14 +364,53 @@
         <section id="section-13">
           <img src="/assets/images/m_section_13_title.png" class="title" alt="title" />
           <div class="timer">
-            <span>2</span>
-            <span>4</span>
+            <script>
+              function remaindTime() {
+                var now = new Date();
+                var end = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 24, 00, 00);
+                var open = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 24, 00, 00);
+
+                var nt = now.getTime();
+                var ot = open.getTime();
+                var et = end.getTime();
+
+                $(".time").fadeIn();
+                sec = parseInt(et - nt) / 1000;
+                day = parseInt(sec / 60 / 60 / 24);
+                sec = sec - day * 60 * 60 * 24;
+                hour = parseInt(sec / 60 / 60);
+                sec = sec - hour * 60 * 60;
+                min = parseInt(sec / 60);
+                sec = parseInt(sec - min * 60);
+                if (hour < 10) {
+                  hour = "0" + hour;
+                }
+                if (min < 10) {
+                  min = "0" + min;
+                }
+                if (sec < 10) {
+                  sec = "0" + sec;
+                }
+                hour += "";
+                min += "";
+                sec += "";
+                $("#hours_1").html(hour.substr(0, 1));
+                $("#hours_2").html(hour.substr(1, 1));
+                $("#minutes_1").html(min.substr(0, 1));
+                $("#minutes_2").html(min.substr(1, 1));
+                $("#seconds_1").html(sec.substr(0, 1));
+                $("#seconds_2").html(sec.substr(1, 1));
+              }
+              setInterval(remaindTime, 1000);
+            </script>
+            <span id="hours_1">0</span>
+            <span id="hours_2">0</span>
             <b>:</b>
-            <span>2</span>
-            <span>4</span>
+            <span id="minutes_1">0</span>
+            <span id="minutes_2">0</span>
             <b>:</b>
-            <span>2</span>
-            <span>4</span>
+            <span id="seconds_1">0</span>
+            <span id="seconds_2">0</span>
           </div>
           <form action="" name="frm_2" id="frm_2">
             <input type="hidden" name="uid" value="" />
@@ -395,26 +441,7 @@
             <div class="input-row">
               <div class="input">
                 <label for="frm_2_wr_2">희망지역</label>
-                <select name="wr_2" id="frm_2_wr_2">
-                  <option value="서울특별시">서울특별시</option>
-                  <option value="경기도">경기도</option>
-                  <option value="부산광역시">부산광역시</option>
-                  <option value="대구광역시">대구광역시</option>
-                  <option value="광주광역시">광주광역시</option>
-                  <option value="인천광역시">인천광역시</option>
-                  <option value="대전광역시">대전광역시</option>
-                  <option value="울산광역시">울산광역시</option>
-                  <option value="세종특별자치시">세종특별자치시</option>
-                  <option value="강원도">강원도</option>
-                  <option value="충청북도">충청북도</option>
-                  <option value="충청남도">충청남도</option>
-                  <option value="전라북도">전라북도</option>
-                  <option value="전라남도">전라남도</option>
-                  <option value="경상북도">경상북도</option>
-                  <option value="경상남도">경상남도</option>
-                  <option value="제주특별자치도">제주특별자치도</option>
-                  <option value="선택안함">선택안함</option>
-                </select>
+                <input type="text" id="frm_2_wr_2" name="wr_2" placeholder="희망지역" />
               </div>
             </div>
             <div class="agree-area">
@@ -709,26 +736,7 @@
                 </div>
                 <div class="input-row">
                   <label for="frm_3_wr_wr_2">희망지역</label>
-                  <select id="frm_3_wr_wr_2" name="wr_2">
-                    <option value="서울특별시">서울특별시</option>
-                    <option value="경기도">경기도</option>
-                    <option value="부산광역시">부산광역시</option>
-                    <option value="대구광역시">대구광역시</option>
-                    <option value="광주광역시">광주광역시</option>
-                    <option value="인천광역시">인천광역시</option>
-                    <option value="대전광역시">대전광역시</option>
-                    <option value="울산광역시">울산광역시</option>
-                    <option value="세종특별자치시">세종특별자치시</option>
-                    <option value="강원도">강원도</option>
-                    <option value="충청북도">충청북도</option>
-                    <option value="충청남도">충청남도</option>
-                    <option value="전라북도">전라북도</option>
-                    <option value="전라남도">전라남도</option>
-                    <option value="경상북도">경상북도</option>
-                    <option value="경상남도">경상남도</option>
-                    <option value="제주특별자치도">제주특별자치도</option>
-                    <option value="선택안함">선택안함</option>
-                  </select>
+                  <input type="text" id="frm_3_wr_wr_2" name="wr_2" placeholder="희망지역" />
                 </div>
                 <div class="input-row">
                   <label for="frm_3_wr_3">창업예정</label>
@@ -849,26 +857,7 @@
               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
               maxlength="11"
             />
-            <select name="wr_2" id="frm_1_wr_2">
-              <option value="서울특별시">서울특별시</option>
-              <option value="경기도">경기도</option>
-              <option value="부산광역시">부산광역시</option>
-              <option value="대구광역시">대구광역시</option>
-              <option value="광주광역시">광주광역시</option>
-              <option value="인천광역시">인천광역시</option>
-              <option value="대전광역시">대전광역시</option>
-              <option value="울산광역시">울산광역시</option>
-              <option value="세종특별자치시">세종특별자치시</option>
-              <option value="강원도">강원도</option>
-              <option value="충청북도">충청북도</option>
-              <option value="충청남도">충청남도</option>
-              <option value="전라북도">전라북도</option>
-              <option value="전라남도">전라남도</option>
-              <option value="경상북도">경상북도</option>
-              <option value="경상남도">경상남도</option>
-              <option value="제주특별자치도">제주특별자치도</option>
-              <option value="선택안함">선택안함</option>
-            </select>
+            <input type="text" id="frm_1_wr_2" name="wr_2" placeholder="희망지역" />
           </div>
           <div class="submit-area">
             <div>

@@ -1,3 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 100;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Thin.otf) format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 300;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 900;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Black.otf) format("opentype");
+}
+@font-face {
+  font-family: "S-CoreDream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "S-CoreDreamr";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 html,
 body,
 div,
@@ -108,7 +169,7 @@ body,
 html {
   font-family: "Noto Sans KR";
   font-size: 10px;
-  letter-spacing: -0.05rem;
+  letter-spacing: -0.1rem;
 }
 
 ol,
@@ -354,9 +415,17 @@ body {
   margin: 0 auto 1.5rem;
 }
 #wrapper #main #section-5 .contents {
-  width: 75%;
-  display: block;
-  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+}
+#wrapper #main #section-5 .contents b {
+  font-weight: bold;
+}
+#wrapper #main #section-5 .contents strong {
+  font-size: 2rem;
+  color: #f5dc3a;
 }
 #wrapper #main #section-6 {
   position: relative;
@@ -931,6 +1000,14 @@ body {
   display: block;
   margin: 0 auto 1rem;
 }
+#wrapper #main #section-17 p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-align: center;
+}
+#wrapper #main #section-17 p b {
+  font-weight: bold;
+}
 #wrapper #main #section-17 ul li img {
   width: 100%;
 }
@@ -951,7 +1028,7 @@ body {
   margin: 0 auto 3rem;
 }
 #wrapper #main #section-18 .box-1 {
-  padding: 3rem 3rem;
+  padding: 3.3rem 3rem;
   box-sizing: border-box;
   margin-bottom: 2.5rem;
   background-size: cover;
@@ -976,7 +1053,7 @@ body {
   width: 2%;
 }
 #wrapper #main #section-18 .box-2 {
-  padding: 5rem 1rem 0.5rem;
+  padding: 10rem 1rem 0.5rem;
   box-sizing: border-box;
   margin-bottom: 2.5rem;
   background-size: cover;
