@@ -28,10 +28,8 @@
             if (data.error) {
               alert(data.error);
               if (data.url) document.location.href = data.url;
-
               return false;
             }
-
             token = data.token;
           },
         });

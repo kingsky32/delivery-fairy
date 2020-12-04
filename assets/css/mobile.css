@@ -244,7 +244,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding-top: 6rem;
-  padding-bottom: 15.9rem;
+  padding-bottom: 10rem;
 }
 #wrapper #header {
   background-color: #032d53;
@@ -1209,8 +1209,8 @@ body {
   left: 0;
   right: 0;
   margin: 0 auto;
-  background-color: #032d53;
-  padding: 2rem 3rem;
+  background-color: #ff6c02;
+  padding: 1rem 1.5rem;
   box-sizing: border-box;
   z-index: 50;
 }
@@ -1218,7 +1218,9 @@ body {
   display: flex;
 }
 #wrapper .fix-area form .input-area {
-  flex: 3;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 7;
 }
 #wrapper .fix-area form .input-area input,
 #wrapper .fix-area form .input-area select {
@@ -1227,10 +1229,45 @@ body {
   width: 100%;
   box-sizing: border-box;
   padding: 1rem 0.8rem;
+  flex: 1 1 35%;
 }
-#wrapper .fix-area form .input-area input:not(:last-child),
-#wrapper .fix-area form .input-area select:not(:last-child) {
-  margin-bottom: 0.7rem;
+#wrapper .fix-area form .input-area input:nth-child(1), #wrapper .fix-area form .input-area input:nth-child(2),
+#wrapper .fix-area form .input-area select:nth-child(1),
+#wrapper .fix-area form .input-area select:nth-child(2) {
+  margin-bottom: 1rem;
+}
+#wrapper .fix-area form .input-area input:nth-child(2n-1),
+#wrapper .fix-area form .input-area select:nth-child(2n-1) {
+  margin-right: 1rem;
+}
+#wrapper .fix-area form .input-area .check-area {
+  flex: 3;
+}
+#wrapper .fix-area form .input-area .check-area div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+#wrapper .fix-area form .input-area .check-area div:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+#wrapper .fix-area form .input-area .check-area div input,
+#wrapper .fix-area form .input-area .check-area div select {
+  width: 1.5rem;
+  flex: 0 0 1.5rem;
+  margin: 0 0.5rem 0 0;
+}
+#wrapper .fix-area form .input-area .check-area div label {
+  font-size: 0.75rem;
+  color: #ffffff;
+  flex: 1;
+}
+#wrapper .fix-area form .input-area .check-area div a {
+  font-size: 0.75rem;
+  color: #ffffff;
+  background-color: #092846;
+  border-radius: 0.2rem;
+  padding: 0.2rem 0.5rem;
 }
 #wrapper .fix-area form .submit-area {
   flex: 2;
@@ -1238,38 +1275,26 @@ body {
   flex-flow: column nowrap;
   margin-left: 1rem;
 }
-#wrapper .fix-area form .submit-area div {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-#wrapper .fix-area form .submit-area div input,
-#wrapper .fix-area form .submit-area div select {
-  margin-left: 0;
-}
-#wrapper .fix-area form .submit-area div label {
-  font-size: 0.75rem;
-  color: #ffffff;
-  flex: 1;
-}
-#wrapper .fix-area form .submit-area div a {
-  font-size: 0.75rem;
-  color: #ffffff;
-  background-color: #092846;
-  border-radius: 0.2rem;
-  padding: 0.2rem 0.5rem;
-}
-#wrapper .fix-area form .submit-area div:last-of-type {
-  margin-bottom: 1rem;
-}
 #wrapper .fix-area form .submit-area button {
   flex: 1;
   width: 100%;
-  background-color: #ee731c;
+  background-color: #0c2c6a;
   border-radius: 0.5rem;
   color: #ffffff;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
+}
+#wrapper .fix-area form .submit-area button:first-child {
+  background-color: #ffd200;
+  color: #0c2c6a;
+}
+#wrapper .fix-area form .submit-area button:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+#wrapper .fix-area form .submit-area button a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=mobile.css.map */
