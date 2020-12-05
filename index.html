@@ -905,138 +905,125 @@
           </div>
         </section>
       </main>
-      <!-- <div class="fix-area">
-        <form action="" name="frm_1" id="frm_1">
-          <input type="hidden" name="uid" value="" />
-          <input type="hidden" name="w" value="" />
-          <input type="hidden" name="bo_table" value="fix_form" />
-          <input type="hidden" name="wr_id" value="0" />
-          <input type="hidden" name="wr_subject" value="하단 픽스 창구" />
-          <input type="hidden" name="wr_content" value="하단 픽스 창구" />
-          <input type="hidden" id="wr_email" name="wr_email" value="" />
-          <input type="hidden" name="wr_homepage" value="" />
-          <div class="input-area">
-            <input type="text" name="wr_name" id="frm_1_wr_name" placeholder="이름" />
-            <input
-              type="text"
-              name="wr_1"
-              id="frm_1_wr_1"
-              placeholder="연락처"
-              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
-              maxlength="11"
-            />
-            <select name="wr_2" id="frm_1_wr_2">
-              <option value="서울특별시">서울특별시</option>
-              <option value="경기도">경기도</option>
-              <option value="부산광역시">부산광역시</option>
-              <option value="대구광역시">대구광역시</option>
-              <option value="광주광역시">광주광역시</option>
-              <option value="인천광역시">인천광역시</option>
-              <option value="대전광역시">대전광역시</option>
-              <option value="울산광역시">울산광역시</option>
-              <option value="세종특별자치시">세종특별자치시</option>
-              <option value="강원도">강원도</option>
-              <option value="충청북도">충청북도</option>
-              <option value="충청남도">충청남도</option>
-              <option value="전라북도">전라북도</option>
-              <option value="전라남도">전라남도</option>
-              <option value="경상북도">경상북도</option>
-              <option value="경상남도">경상남도</option>
-              <option value="제주특별자치도">제주특별자치도</option>
-              <option value="선택안함">선택안함</option>
-            </select>
-          </div>
-          <div class="submit-area">
-            <div>
-              <input type="checkbox" id="frm_1_agree_1" checked />
-              <label for="frm_1_agree_1">개인정보취급방침에 동의</label>
-              <a href="">전문보기</a>
+      <div class="fix-area">
+        <div class="inner">
+          <img src="/assets/images/fix_title.png" class="title" alt="fix_title" />
+          <form action="" name="frm_1" id="frm_1">
+            <input type="hidden" name="uid" value="" />
+            <input type="hidden" name="w" value="" />
+            <input type="hidden" name="bo_table" value="fix_form" />
+            <input type="hidden" name="wr_id" value="0" />
+            <input type="hidden" name="wr_subject" value="하단 픽스 창구" />
+            <input type="hidden" name="wr_content" value="하단 픽스 창구" />
+            <input type="hidden" id="wr_email" name="wr_email" value="" />
+            <input type="hidden" name="wr_homepage" value="" />
+            <div class="input-area">
+              <input type="text" name="wr_name" id="frm_1_wr_name" placeholder="이름" />
+              <input
+                type="text"
+                name="wr_1"
+                id="frm_1_wr_1"
+                placeholder="연락처"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                maxlength="11"
+              />
+              <input type="text" name="wr_2" id="frm_1_wr_2" placeholder="희망지역" />
+              <button type="submit" id="frm_1_submit">접수하기</button>
             </div>
-            <div>
-              <input type="checkbox" id="frm_1_agree_2" checked />
-              <label for="frm_1_agree_2">마케팅 활용 동의</label>
-              <a href="">전문보기</a>
+            <div class="check-area">
+              <div>
+                <input type="checkbox" id="frm_1_agree_1" checked />
+                <label for="frm_1_agree_1">개인정보취급방침에 동의</label>
+                <a href="">전문보기</a>
+              </div>
+              <div>
+                <input type="checkbox" id="frm_1_agree_2" checked />
+                <label for="frm_1_agree_2">마케팅 활용 동의</label>
+                <a href="">전문보기</a>
+              </div>
+              <div class="call">
+                <img src="/assets/images/fix_call.png" alt="fix_call" />
+              </div>
             </div>
-            <button type="submit" id="frm_1_submit">접수하기</button>
-          </div>
-        </form>
-        <script>
-          $(function () {
-            $("#frm_1_submit").click(function (e) {
-              e.preventDefault();
-              if ($.trim($("#frm_1_wr_name").val()) == "") {
-                alert("이름을 입력하세요.");
-                $("#frm_1_wr_name").focus();
-                return false;
-              }
+          </form>
+          <script>
+            $(function () {
+              $("#frm_1_submit").click(function (e) {
+                e.preventDefault();
+                if ($.trim($("#frm_1_wr_name").val()) == "") {
+                  alert("이름을 입력하세요.");
+                  $("#frm_1_wr_name").focus();
+                  return false;
+                }
 
-              if ($.trim($("#frm_1_wr_1").val()) == "") {
-                alert("연락처를 입력하세요.");
-                $("#frm_1_wr_1").focus();
-                return false;
-              }
+                if ($.trim($("#frm_1_wr_1").val()) == "") {
+                  alert("연락처를 입력하세요.");
+                  $("#frm_1_wr_1").focus();
+                  return false;
+                }
 
-              if (!$("#frm_1_agree_1").is(":checked")) {
-                alert("개인정보보호취급방침에 동의해주세요.");
-                $("#frm_1_agree_1").focus();
-                return false;
-              }
+                if (!$("#frm_1_agree_1").is(":checked")) {
+                  alert("개인정보보호취급방침에 동의해주세요.");
+                  $("#frm_1_agree_1").focus();
+                  return false;
+                }
 
-              if (!$("#frm_1_agree_2").is(":checked")) {
-                alert("마케팅 활용에 동의해주세요.");
-                $("#frm_1_agree_2").focus();
-                return false;
-              }
+                if (!$("#frm_1_agree_2").is(":checked")) {
+                  alert("마케팅 활용에 동의해주세요.");
+                  $("#frm_1_agree_2").focus();
+                  return false;
+                }
 
-              var token = get_write_token(frm_1.bo_table.value);
-              if (!token) {
-                alert("토큰 정보가 올바르지 않습니다.");
-                return false;
-              }
+                var token = get_write_token(frm_1.bo_table.value);
+                if (!token) {
+                  alert("토큰 정보가 올바르지 않습니다.");
+                  return false;
+                }
 
-              if (!regNumExp.test($("#frm_1_wr_1").val())) {
-                alert("잘못된 휴대폰 번호입니다. 숫자만 입력하세요.");
-                $("#frm_1_wr_1").focus();
-                return false;
-              }
+                if (!regNumExp.test($("#frm_1_wr_1").val())) {
+                  alert("잘못된 휴대폰 번호입니다. 숫자만 입력하세요.");
+                  $("#frm_1_wr_1").focus();
+                  return false;
+                }
 
-              $.ajax({
-                url: "/g5/bbs/ajax.write_update.php",
-                type: "POST",
-                data: {
-                  uid: frm_1.uid.value,
-                  w: frm_1.w.value,
-                  bo_table: frm_1.bo_table.value,
-                  wr_id: frm_1.wr_id.value,
-                  wr_subject: frm_1.wr_subject.value,
-                  wr_name: frm_1.wr_name.value,
-                  wr_1: frm_1.wr_1.value,
-                  wr_2: frm_1.wr_2.value,
-                  wr_email: frm_1.wr_email.value,
-                  wr_homepage: frm_1.wr_homepage.value,
-                  wr_content: frm_1.wr_content.value,
-                  token: token,
-                },
-                dataType: "text",
-                error: function (xhr, status, error) {
-                  switch (xhr.status) {
-                    case 400:
-                      alert("자동등록방지 숫자가 틀렸습니다.");
-                      break;
-                    default:
-                      alert(error);
-                  }
-                },
-                async: false,
-                cache: false,
-                success: function (data) {
-                  alert("등록완료!");
-                },
+                $.ajax({
+                  url: "/g5/bbs/ajax.write_update.php",
+                  type: "POST",
+                  data: {
+                    uid: frm_1.uid.value,
+                    w: frm_1.w.value,
+                    bo_table: frm_1.bo_table.value,
+                    wr_id: frm_1.wr_id.value,
+                    wr_subject: frm_1.wr_subject.value,
+                    wr_name: frm_1.wr_name.value,
+                    wr_1: frm_1.wr_1.value,
+                    wr_2: frm_1.wr_2.value,
+                    wr_email: frm_1.wr_email.value,
+                    wr_homepage: frm_1.wr_homepage.value,
+                    wr_content: frm_1.wr_content.value,
+                    token: token,
+                  },
+                  dataType: "text",
+                  error: function (xhr, status, error) {
+                    switch (xhr.status) {
+                      case 400:
+                        alert("자동등록방지 숫자가 틀렸습니다.");
+                        break;
+                      default:
+                        alert(error);
+                    }
+                  },
+                  async: false,
+                  cache: false,
+                  success: function (data) {
+                    alert("등록완료!");
+                  },
+                });
               });
             });
-          });
-        </script>
-      </div> -->
+          </script>
+        </div>
+      </div>
     </div>
   </body>
 </html>
