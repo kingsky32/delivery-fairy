@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  font-family: "Noto Sans KR", sans-serif !important;
+  font-family: "Noto Sans KR", sans-serif;
 }
 #wrapper {
   max-width: 42.5rem;
@@ -1101,6 +1101,25 @@ body {
             height: 100%;
           }
         }
+      }
+    }
+  }
+  #footer {
+    padding: 2.4rem 0 4.3rem;
+    background-color: #032d53;
+    .inner {
+      p {
+        text-align: center;
+        color: #ffffff;
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        margin-bottom: 1.5rem;
+      }
+      .copyright {
+        display: block;
+        font-size: 1.5rem;
+        text-align: center;
+        color: #ffffff;
       }
     }
   }

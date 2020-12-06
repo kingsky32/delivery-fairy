@@ -3,6 +3,7 @@
 #wrapper {
   min-width: 110rem;
   padding-top: 12rem;
+  padding-bottom: 11rem;
   .inner {
     width: 110rem;
     margin: 0 auto;
@@ -1120,6 +1121,23 @@
             justify-content: flex-end;
           }
         }
+      }
+    }
+  }
+  #footer {
+    padding: 2.4rem 0 4.3rem;
+    background-color: #032d53;
+    .inner {
+      p {
+        color: #ffffff;
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+        margin-bottom: 1.5rem;
+      }
+      .copyright {
+        display: block;
+        font-size: 1.5rem;
+        color: #ffffff;
       }
     }
   }

@@ -238,6 +238,7 @@ a {
 #wrapper {
   min-width: 110rem;
   padding-top: 12rem;
+  padding-bottom: 11rem;
 }
 #wrapper .inner {
   width: 110rem;
@@ -1343,6 +1344,21 @@ a {
   flex: 1;
   display: flex;
   justify-content: flex-end;
+}
+#wrapper #footer {
+  padding: 2.4rem 0 4.3rem;
+  background-color: #032d53;
+}
+#wrapper #footer .inner p {
+  color: #ffffff;
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+#wrapper #footer .inner .copyright {
+  display: block;
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=main.css.map */
